@@ -21,6 +21,9 @@ filetype plugin indent on
 syntax enable
 set laststatus=2
 
+" ::tabo -> :tabo
+norea <expr> tabo getcmdtype() == ':' && getcmdline() == 'tabo' ? 'tabp' : 'tabo'
+
 if has('termguicolors')
   set termguicolors
 endif
