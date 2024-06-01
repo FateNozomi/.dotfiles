@@ -7,13 +7,8 @@ vmap <leader>\ "+y
 nmap <leader>= "+p<cr>
 nmap <leader>c :w !clip.exe<cr>
 vmap <leader>c :w !clip.exe<cr>
-nmap <leader>- :Ve .<cr>
 nmap <leader>t :bo term<cr>
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_preview = 1
-let g:netrw_winsize = 30
+nmap <leader>- :E<cr>
 
 set tabstop=4
 set shiftwidth=4
