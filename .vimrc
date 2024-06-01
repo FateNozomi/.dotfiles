@@ -4,7 +4,7 @@ nmap <C-n> :noh<cr>
 nmap <leader>w :w!<cr>
 nmap <C-c> :%y+<cr>
 vmap <C-c> "+y
-nmap <leader>= "+p<cr>
+nmap <leader>v "+p
 nmap <leader>c :w !clip.exe<cr>
 vmap <leader>c :w !clip.exe<cr>
 nmap <leader>t :bo term<cr>
