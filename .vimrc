@@ -2,8 +2,8 @@ let mapleader = "\\"
 nmap <leader>s :source ~/.vimrc<cr>
 nmap <C-n> :noh<cr>
 nmap <leader>w :w!<cr>
-nmap <leader>\ :%y+<cr>
-vmap <leader>\ "+y
+nmap <C-c> :%y+<cr>
+vmap <C-c> "+y
 nmap <leader>= "+p<cr>
 nmap <leader>c :w !clip.exe<cr>
 vmap <leader>c :w !clip.exe<cr>
