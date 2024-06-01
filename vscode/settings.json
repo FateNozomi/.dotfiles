@@ -1,0 +1,58 @@
+{
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-k>": false,
+    "<C-p>": false
+  },
+  "files.trimTrailingWhitespace": true,
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Gruvbox Material Dark"
+}
