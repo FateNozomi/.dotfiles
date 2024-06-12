@@ -7,3 +7,13 @@ function hc {
 function ju {
     cd C:\SC4\BFG.Jump
 }
+function mpva {
+    param (
+        [string]$Link
+    )
+    mpv `
+    --ytdl-format='ba' `
+    --ytdl-raw-options="yes-playlist=" `
+    --term-playing-msg='Title: ${media-title}' `
+    $Link
+}
