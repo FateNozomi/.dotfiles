@@ -27,7 +27,8 @@
     },
     {
       "before": [
-        "<C-n>"
+        "<leader>",
+        "n"
       ],
       "commands": [
         ":nohl"
