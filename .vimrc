@@ -1,6 +1,6 @@
 let mapleader = " "
 nmap <leader>s :source ~/.vimrc<cr>
-nmap <C-n> :noh<cr>
+nmap <leader>n :noh<cr>
 nmap <leader>w :w!<cr>
 nmap <C-c> :%y+<cr>
 vmap <C-c> "+y
