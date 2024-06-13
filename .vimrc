@@ -46,3 +46,4 @@ endif
 
 " Visual Studio
 map gi :vsc Edit.GoToImplementation<cr>
+map gr :vsc Edit.FindAllReferences<cr>
