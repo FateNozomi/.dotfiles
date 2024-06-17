@@ -73,6 +73,26 @@
       "silent": true
     }
   ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    }
+  ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-p>": false,
@@ -85,5 +105,6 @@
     "editor.tabSize": 2
   },
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Material Dark"
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "diffEditor.renderSideBySide": false
 }
