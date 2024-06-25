@@ -44,10 +44,12 @@
           "layout": "BSP"
         },
         {
-          "name": "V"
+          "name": "V",
+          "layout": "BSP"
         },
         {
-          "name": "VI"
+          "name": "VI",
+          "layout": "Grid"
         }
       ]
     }
