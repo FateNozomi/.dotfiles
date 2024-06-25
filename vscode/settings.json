@@ -109,6 +109,7 @@
     "<C-f>": false,
     "<C-b>": false
   },
+  "vim.smartRelativeLine": true,
   "files.trimTrailingWhitespace": true,
   "[json]": {
     "editor.tabSize": 2
