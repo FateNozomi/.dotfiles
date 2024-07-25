@@ -111,7 +111,7 @@
   },
   "vim.smartRelativeLine": true,
   "files.trimTrailingWhitespace": true,
-  "[json]": {
+  "[json][typescript][typescriptreact][html][css]": {
     "editor.tabSize": 2
   },
   "workbench.startupEditor": "none",
