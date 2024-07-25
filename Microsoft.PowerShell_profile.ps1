@@ -1,3 +1,5 @@
+Invoke-Expression (&starship init powershell)
+
 function ho { cd $home }
 function hc {
     Clear-Content (Get-PSReadlineOption).HistorySavePath
