@@ -8,6 +8,12 @@ function hc {
 function lfcd {
     lf -print-last-dir $args | Set-Location
 }
+function fd {
+    $fzPath = $(fzf)
+    if ($fzPath -ne $null) {
+        Set-Location (Get-Item $fzPath).Directory.FullName
+    }
+}
 function ju {
     cd C:\SC4\BFG.Jump
 }
