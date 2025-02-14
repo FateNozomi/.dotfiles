@@ -1,27 +1,38 @@
 let mapleader = " "
-nmap <leader>s :source ~/.vimrc<cr>
-nmap <leader>n :noh<cr>
-nmap <leader>w :w!<cr>
-nmap <C-c> :%y+<cr>
-vmap <C-c> "+y
-nmap <leader>v "+p
-nmap <leader>c :w !clip.exe<cr>
-vmap <leader>c :w !clip.exe<cr>
-nmap <leader>t :bo term<cr>
-nmap <leader>- :E<cr>
-
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set ignorecase
-set smartcase
-set hlsearch
 
 set number
 
-filetype plugin indent on
-syntax enable
+set expandtab
+set smartindent
+set tabstop=2
+set shiftwidth=2
+
+set hlsearch
+set ignorecase
+set smartcase
+
+set list
+set listchars=tab:»\ ,trail:·,nbsp:␣
+
+set cursorline
+
+set scrolloff=10
+
 set laststatus=2
+set ruler
+
+syntax enable
+filetype plugin indent on
+
+nmap <leader>s :source ~/.vimrc<cr>
+nmap <leader>n :noh<cr>
+nmap <leader>w :w!<cr>
+nmap <leader>t :bo term<cr>
+nmap <leader>- :E<cr>
+
+nmap <leader>y "+Y
+vmap <leader>y "+y
+nmap <leader>p "+p
 
 " ::tabo -> :tabo
 norea <expr> tabo getcmdtype() == ':' && getcmdline() == 'tabo' ? 'tabp' : 'tabo'
