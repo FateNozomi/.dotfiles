@@ -31,11 +31,10 @@
     "backspace",
     "delete"
   ],
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "none",
   "[json][typescript][typescriptreact][html][css]": {
     "editor.tabSize": 2
-  },
-  "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Material Dark",
-  "diffEditor.renderSideBySide": false
+  }
 }
