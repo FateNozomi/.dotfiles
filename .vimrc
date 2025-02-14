@@ -17,11 +17,7 @@ set ignorecase
 set smartcase
 set hlsearch
 
-set number relativenumber
-augroup rnutoggle
-    autocmd InsertEnter * :set nornu
-    autocmd InsertLeave * :set rnu
-augroup END
+set number
 
 filetype plugin indent on
 syntax enable
