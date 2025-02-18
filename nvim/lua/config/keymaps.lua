@@ -16,15 +16,23 @@ map('n', '<leader>p', '"+p')
 map('v', '<leader>p', '"+p')
 
 -- LSP
-map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
-map('n', 'gr', vim.lsp.buf.references, { desc = 'Find All References' })
-map('n', 'gI', vim.lsp.buf.implementation, { desc = 'Find All Implementations' })
-map('n', 'gA', vim.lsp.buf.code_action, { desc = 'Code action' })
-map('n', 'gR', vim.lsp.buf.rename, { desc = 'Rename Symbol' })
+if not vim.g.vscode then
+  map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
+  map('n', 'gr', vim.lsp.buf.references, { desc = 'Find All References' })
+  map('n', 'gI', vim.lsp.buf.implementation, { desc = 'Find All Implementations' })
+  map('n', 'gA', vim.lsp.buf.code_action, { desc = 'Code action' })
+  map('n', '<leader>f', vim.lsp.buf.format, { desc = 'Formats buffer' })
+else
+  map('n', 'gd', "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
+  map('n', 'gr', "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
+  map('n', 'gI', "<CMD>lua require('vscode').action('editor.action.goToImplementation')<CR>")
+  map('n', 'gA', "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
+  map('n', '<leader>f', "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
+end
 
+map('n', 'gR', vim.lsp.buf.rename, { desc = 'Rename Symbol' })
 map('n', 'gO', vim.lsp.buf.document_symbol, { desc = 'Lists all symbols in the current buffer' })
 map('i', '<C-s>', vim.lsp.buf.signature_help, { desc = 'Display signature information' })
-map('n', '<leader>f', vim.lsp.buf.format, { desc = 'Formats buffer' })
 
 -- Oil
 map('n', '<leader>-', '<CMD>Oil<CR>')
