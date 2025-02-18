@@ -32,6 +32,9 @@ map('n', '<leader>-', '<CMD>Oil<CR>')
 -- FzfLua
 map('n', '<C-p>', '<CMD>FzfLua files<CR>')
 map('n', '<leader>f?', '<CMD>FzfLua<CR>', { desc = 'FzfLua Builtin' })
+map('n', '<leader>fg', '<CMD>FzfLua live_grep<CR>', { desc = 'FzfLua Live Grep' })
+map('n', '<leader>fo', '<CMD>FzfLua oldfiles<CR>', { desc = 'FzfLua Oldfiles' })
+map('n', '<leader>fh', '<CMD>FzfLua helptags<CR>', { desc = 'FzfLua Help Tags' })
 
 map('n', '<leader>la', '<CMD>FzfLua lsp_code_actions<CR>', { desc = 'Code action' })
 map('n', '<leader>lr', '<CMD>FzfLua lsp_references<CR>', { desc = 'Find All References' })
