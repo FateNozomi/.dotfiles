@@ -15,6 +15,14 @@ map('v', '<leader>y', '"+y')
 map('n', '<leader>p', '"+p')
 map('v', '<leader>p', '"+p')
 
+if not vim.g.vscode then
+  map('n', '<leader>ft', '<CMD>terminal<CR>', { desc = 'Terminal' })
+  map('t', '<Esc>', '<C-\\><C-n>', { desc = 'Terminal normal mode' })
+else
+  map('n', '<leader>ft', "<CMD>lua require('vscode').action('workbench.action.terminal.focus')<CR>",
+    { desc = 'Terminal' })
+end
+
 -- LSP
 if not vim.g.vscode then
   map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
