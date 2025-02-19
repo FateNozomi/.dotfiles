@@ -38,7 +38,11 @@ map('i', '<C-s>', vim.lsp.buf.signature_help, { desc = 'Display signature inform
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 -- Oil
-map('n', '<leader>-', '<CMD>Oil<CR>')
+if not vim.g.vscode then
+  map('n', '<leader>-', '<CMD>Oil<CR>')
+else
+  map('n', '<leader>-', "<CMD>lua require('vscode').action('workbench.view.explorer')<CR>")
+end
 
 -- FzfLua
 map('n', '<C-p>', '<CMD>FzfLua files<CR>')
