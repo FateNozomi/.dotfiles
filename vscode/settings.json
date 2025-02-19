@@ -2,35 +2,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "vscode-neovim.ctrlKeysForNormalMode": [
-    "a",
-    "c",
-    "d",
-    "e",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "o",
-    "r",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-    "/",
-    "]",
-    "right",
-    "left",
-    "up",
-    "down",
-    "backspace",
-    "delete"
-  ],
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Gruvbox Dark Soft",
   "files.trimTrailingWhitespace": true,
@@ -38,5 +9,6 @@
   "[json][jsonc][typescript][typescriptreact][html][css]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.externalBrowser": "firefox"
 }
