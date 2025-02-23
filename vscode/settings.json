@@ -3,6 +3,7 @@
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
+  "window.density.editorTabHeight": "compact",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.externalBrowser": "firefox",
