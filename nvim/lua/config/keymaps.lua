@@ -70,3 +70,9 @@ if vim.g.vscode then
   map('n', '<C-h>', "<CMD>lua require('vscode').action('harpoon-vscode.goToHarpoon')<CR>")
   map('n', '<leader>he', "<CMD>lua require('vscode').action('harpoon-vscode.editHarpoon')<CR>")
 end
+
+-- vscode Bookmarks
+if vim.g.vscode then
+  map('n', '<leader>mm', "<CMD>lua require('vscode').action('bookmarks.toggle')<CR>")
+  map('n', '<leader>ml', "<CMD>lua require('vscode').action('bookmarks.listFromAllFiles')<CR>")
+end
