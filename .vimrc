@@ -59,6 +59,7 @@ nmap <leader>- :E<cr>
 nmap <leader>y "+Y
 vmap <leader>y "+y
 nmap <leader>p "+p
+vmap <leader>p "+p
 
 nmap <C-p> :Files<cr>
 
