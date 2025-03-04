@@ -1,18 +1,20 @@
 Invoke-Expression (&starship init powershell)
 
+Set-Alias -Name lg -Value lazygit.exe
+
 function ho { cd $home }
 function hc {
     Clear-Content (Get-PSReadlineOption).HistorySavePath
     Clear-History
-}
-function lfcd {
-    lf -print-last-dir $args | Set-Location
 }
 function zcd {
     $fzPath = $(fzf)
     if ($fzPath -ne $null) {
         Set-Location (Get-Item $fzPath).Directory.FullName
     }
+}
+function lfcd {
+    lf -print-last-dir $args | Set-Location
 }
 function ju {
     cd C:\SC4\BFG.Jump
