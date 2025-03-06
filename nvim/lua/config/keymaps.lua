@@ -32,8 +32,8 @@ if not vim.g.vscode then
   map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
   map("n", "gr", vim.lsp.buf.references, { desc = "Find All References" })
   map("n", "gI", vim.lsp.buf.implementation, { desc = "Find All Implementations" })
-  map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
-  map("n", "<leader>fd", vim.lsp.buf.format, { desc = "Formats buffer" })
+  map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+  map("n", "<leader>fd", vim.lsp.buf.format, { desc = "Format Buffer" })
 else
   map("n", "gd", "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
   map("n", "gr", "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
@@ -47,6 +47,13 @@ map("n", "gO", vim.lsp.buf.document_symbol, { desc = "Lists all symbols in the c
 map("n", "gK", vim.lsp.buf.signature_help, { desc = "Display signature information" })
 map("i", "<C-s>", vim.lsp.buf.signature_help, { desc = "Display signature information" })
 
+-- location list
+map("n", "<leader>xl", vim.diagnostic.setloclist, { desc = "Location List" })
+
+-- quickfix list
+map("n", "<leader>xq", vim.diagnostic.setqflist, { desc = "Quickfix List" })
+
+-- diagnostic
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 -- Oil
