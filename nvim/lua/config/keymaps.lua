@@ -55,6 +55,9 @@ map("n", "<leader>xl", vim.diagnostic.setloclist, { desc = "Location List" })
 -- quickfix list
 map("n", "<leader>xq", vim.diagnostic.setqflist, { desc = "Quickfix List" })
 
+map("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
+map("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
+
 -- diagnostic
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
