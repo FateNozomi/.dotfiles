@@ -16,7 +16,6 @@ map("n", "<leader>p", '"+p')
 map("v", "<leader>p", '"+p')
 
 if not vim.g.vscode then
-  map("n", "<leader>ft", "<CMD>terminal<CR>", { desc = "Terminal" })
   map("t", "<Esc>", "<C-\\><C-n>", { desc = "Terminal normal mode" })
   map("t", "<M-r>", [['<C-\><C-N>"'.nr2char(getchar()).'pi']], { expr = true })
 else
