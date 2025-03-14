@@ -4,7 +4,13 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c_sharp" },
+        ensure_installed = {
+          "c_sharp",
+          "javascript",
+          "json",
+          "jsonc",
+          "typescript",
+        },
         sync_install = false,
         auto_install = false,
         highlight = {
