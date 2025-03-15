@@ -31,3 +31,6 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Default statusline with git integration
+vim.opt.statusline = "%<%f %h%m%r%{FugitiveStatusline()}%{get(b:,'gitsigns_status','')} %=%-14.(%l,%c%V%) %P"
