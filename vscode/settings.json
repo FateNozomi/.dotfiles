@@ -3,6 +3,7 @@
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
+  "editor.formatOnSave": true,
   "window.density.editorTabHeight": "compact",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
@@ -15,5 +16,6 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "remote.autoForwardPortsSource": "hybrid"
 }
