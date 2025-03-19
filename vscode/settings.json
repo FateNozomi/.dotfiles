@@ -4,9 +4,7 @@
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
-  "window.density.editorTabHeight": "compact",
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "extensions.experimental.affinity": {
