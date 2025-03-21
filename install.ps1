@@ -7,6 +7,9 @@ New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\init.lua -Target $H
 New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\lua -Target $HOME\.dotfiles\nvim\lua
 New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\after -Target $HOME\.dotfiles\nvim\after
 
+# wezterm
+New-Item -ItemType SymbolicLink -Path $HOME\.config\wezterm -Target $HOME\.dotfiles\wezterm
+
 # pwsh profile
 New-Item -ItemType SymbolicLink -Path $PROFILE -Target $HOME\.dotfiles\Microsoft.PowerShell_profile.ps1
 
