@@ -79,3 +79,8 @@ if vim.g.vscode then
   map("n", "<leader>mm", "<CMD>lua require('vscode').action('bookmarks.toggle')<CR>")
   map("n", "<leader>ml", "<CMD>lua require('vscode').action('bookmarks.listFromAllFiles')<CR>")
 end
+
+-- vscode Centered Layout
+if vim.g.vscode then
+  map("n", "<leader>z", "<CMD>lua require('vscode').action('workbench.action.toggleCenteredLayout')<CR>")
+end
