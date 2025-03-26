@@ -1,5 +1,12 @@
 local map = vim.keymap.set
 
+-- Clear default LSP keymaps
+vim.keymap.del("n", "grn")
+vim.keymap.del("n", "gra")
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "gri")
+vim.keymap.del("n", "gO")
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map("n", "<Esc><Esc>", "<Esc>:nohlsearch<CR>", { desc = "Clear 'hlsearch'", silent = true })
@@ -46,7 +53,6 @@ end
 map("n", "gR", vim.lsp.buf.rename, { desc = "Rename Symbol" })
 map("n", "gO", vim.lsp.buf.document_symbol, { desc = "Lists all symbols in the current buffer" })
 map("n", "gK", vim.lsp.buf.signature_help, { desc = "Display signature information" })
-map("i", "<C-s>", vim.lsp.buf.signature_help, { desc = "Display signature information" })
 
 -- location list
 map("n", "<leader>xl", vim.diagnostic.setloclist, { desc = "Location List" })
