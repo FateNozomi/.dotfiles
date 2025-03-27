@@ -5,7 +5,7 @@
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
   "catppuccin.accentColor": "rosewater",
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
