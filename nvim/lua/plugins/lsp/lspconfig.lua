@@ -1,8 +1,8 @@
 return {
   {
+    enabled = false,
     "neovim/nvim-lspconfig",
     dependencies = {
-      { "saghen/blink.cmp" },
       {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
@@ -29,7 +29,6 @@ return {
         config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
         lspconfig[server].setup(config)
       end
-
       vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
         callback = function() vim.lsp.codelens.refresh({ bufnr = 0 }) end,
       })
