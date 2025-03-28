@@ -11,6 +11,11 @@ config.default_domain = "WSL:Ubuntu"
 -- Keymaps
 config.keys = {
   {
+    mods = "CTRL|SHIFT",
+    key = "t",
+    action = wezterm.action.SpawnCommandInNewTab({ domain = "CurrentPaneDomain", cwd = "~" }),
+  },
+  {
     mods = "SHIFT|ALT",
     key = "_",
     action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain", cwd = "~" }),
