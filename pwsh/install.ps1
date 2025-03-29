@@ -1,11 +1,11 @@
 # pwsh profile
-New-Item -ItemType SymbolicLink -Path $PROFILE -Target $HOME\.dotfiles\Microsoft.PowerShell_profile.ps1
+New-Item -ItemType SymbolicLink -Path $PROFILE -Target $HOME\.dotfiles\pwsh\Microsoft.PowerShell_profile.ps1
 
 # wezterm
 New-Item -ItemType SymbolicLink -Path $HOME\.config\wezterm -Target $HOME\.dotfiles\wezterm
 
 # vim
-New-Item -ItemType SymbolicLink -Path $HOME\.vimrc -Target $HOME\.dotfiles\.vimrc
+New-Item -ItemType SymbolicLink -Path $HOME\.vimrc -Target $HOME\.dotfiles\vim\.vimrc
 New-Item -ItemType SymbolicLink -Path $HOME\vimfiles\autoload -Target $HOME\.vim\autoload
 
 # nvim
