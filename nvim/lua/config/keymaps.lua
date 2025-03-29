@@ -12,15 +12,16 @@ vim.keymap.del("n", "gO")
 map("n", "<Esc><Esc>", "<Esc>:nohlsearch<CR>", { desc = "Clear 'hlsearch'", silent = true })
 
 -- Writes file
-map("n", "<leader>w", "<CMD>w<CR>")
+map("n", "<leader>w", "<CMD>w<CR>", { desc = "Write Buffer" })
 
 -- Copy to system clipboard
-map("n", "<leader>y", '"+Y')
-map("v", "<leader>y", '"+y')
+map("n", "<leader>y", '"+yy', { desc = 'Yank line into "+' })
+map("v", "<leader>y", '"+y', { desc = 'Yank highlighted text into "+' })
 
 -- Paste from system clipboard
-map("n", "<leader>p", '"+p')
-map("v", "<leader>p", '"+p')
+map("n", "<leader>p", '"+p', { desc = 'Paste text from "+ after the cursor' })
+map("n", "<leader>P", '"+P', { desc = 'Paste text from "+ before the cursor' })
+map("v", "<leader>p", '"+p', { desc = 'Replace text from "+ ' })
 
 if not vim.g.vscode then
   map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, desc = "Terminal normal mode" })
