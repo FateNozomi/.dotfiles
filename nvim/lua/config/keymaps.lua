@@ -59,7 +59,6 @@ map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 -- Oil
 if not vim.g.vscode then
-  map("n", "-", "<CMD>lua MiniFiles.open()<CR>")
   map("n", "<leader>-", "<CMD>Oil<CR>")
 else
   map("n", "-", "<CMD>lua require('vscode').action('workbench.view.explorer')<CR>")
