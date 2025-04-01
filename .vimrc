@@ -34,4 +34,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=e
     set shell=pwsh
+
+    nmap <leader>c :%y+<cr>
+    vmap <leader>c "+y<cr>
 endif
