@@ -5,7 +5,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       local harpoon = require("harpoon")
-      harpoon:setup();
+      harpoon:setup()
 
       vim.keymap.set("n", "<leader>hh", function() harpoon:list():add() end, { desc = 'Add to Harpoon' })
       vim.keymap.set("n", "<C-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = 'List Harpoon' })
