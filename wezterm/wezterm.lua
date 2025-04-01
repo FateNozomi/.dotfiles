@@ -13,12 +13,12 @@ config.keys = {
   {
     mods = "SHIFT|ALT",
     key = "_",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain", cwd = "~" }),
   },
   {
     mods = "SHIFT|ALT",
     key = "+",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain", cwd = "~" }),
   },
   {
     mods = "ALT",
