@@ -2,6 +2,8 @@ let mapleader = "\\"
 nmap <leader>s :source ~/.vimrc<cr>
 nmap <C-n> :noh<cr>
 nmap <leader>w :w!<cr>
+nmap <leader>\ :%y+<cr>
+vmap <leader>\ "+y
 nmap <leader>c :w !clip.exe<cr>
 vmap <leader>c :w !clip.exe<cr>
 nmap <leader>t :bo term<cr>
@@ -36,7 +38,4 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=e
     set shell=pwsh
-
-    nmap <leader>c :%y+<cr>
-    vmap <leader>c "+y<cr>
 endif
