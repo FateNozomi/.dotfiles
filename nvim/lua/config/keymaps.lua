@@ -28,13 +28,13 @@ if not vim.g.vscode then
   map('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
   map('n', 'gr', vim.lsp.buf.references, { desc = 'Find All References' })
   map('n', 'gI', vim.lsp.buf.implementation, { desc = 'Find All Implementations' })
-  map('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
+  map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
   map('n', '<leader>fd', vim.lsp.buf.format, { desc = 'Formats buffer' })
 else
   map('n', 'gd', "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
   map('n', 'gr', "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
   map('n', 'gI', "<CMD>lua require('vscode').action('editor.action.goToImplementation')<CR>")
-  map('n', '<leader>ca', "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
+  map({ 'n', 'v' }, '<leader>ca', "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
   map('n', '<leader>fd', "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
 end
 
