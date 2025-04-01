@@ -21,6 +21,7 @@ return {
           git_hl = true,
         },
       },
+      words = { enabled = true },
       zen = {
         enabled = true,
         toggles = {
@@ -76,6 +77,8 @@ return {
       { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
       { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
       { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+      { "]]", function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
+      { "[[", function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
       -- Other
       { "<leader>ft", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     },
