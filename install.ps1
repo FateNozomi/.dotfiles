@@ -1,6 +1,6 @@
 # vim
 New-Item -ItemType SymbolicLink -Path $HOME\.vimrc -Target $HOME\.dotfiles\.vimrc
-New-Item -ItemType SymbolicLink -Path $HOME\vimfiles\pack -Target $HOME\.vim\pack
+New-Item -ItemType SymbolicLink -Path $HOME\vimfiles\autoload -Target $HOME\.vim\autoload
 
 # nvim
 New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\init.lua -Target $HOME\.dotfiles\nvim\init.lua

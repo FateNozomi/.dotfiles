@@ -24,28 +24,22 @@ set ruler
 syntax enable
 filetype plugin indent on
 
-nmap <leader>s :source ~/.vimrc<cr>
-nmap <leader>n :noh<cr>
-nmap <leader>w :w!<cr>
-nmap <leader>t :bo term<cr>
-nmap <leader>- :E<cr>
-
-nmap <leader>y "+Y
-vmap <leader>y "+y
-nmap <leader>p "+p
-
 " ::tabo -> :tabo
 norea <expr> tabo getcmdtype() == ':' && getcmdline() == 'tabo' ? 'tabp' : 'tabo'
+
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
 
 if has('termguicolors')
   set termguicolors
 endif
 
-packadd! gruvbox-material
 set background=dark
-let g:gruvbox_material_background = 'soft'
-let g:gruvbox_material_better_performance = 1
-colorscheme gruvbox-material
+let g:gruvbox_contrast_dark='soft'
+silent! colorscheme gruvbox
 
 if has("gui_running")
   set guifont=Cascadia\ Mono:h11
@@ -55,6 +49,16 @@ if has("gui_running")
   set guioptions-=e
   set shell=pwsh
 endif
+
+nmap <leader>s :source ~/.vimrc<cr>
+nmap <leader>n :noh<cr>
+nmap <leader>w :w!<cr>
+nmap <leader>t :bo term<cr>
+nmap <leader>- :E<cr>
+
+nmap <leader>y "+Y
+vmap <leader>y "+y
+nmap <leader>p "+p
 
 " Visual Studio
 map gi :vsc Edit.GoToImplementation<cr>
