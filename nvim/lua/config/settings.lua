@@ -1,5 +1,3 @@
-local map = vim.keymap.set
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -30,15 +28,3 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
-map('n', '<leader>n', '<CMD>nohlsearch<CR>')
-
--- Writes file
-map('n', '<leader>w', '<CMD>w<CR>')
-
--- Copy to system clipboard
-map('n', '<leader>y', '"+Y')
-map('v', '<leader>y', '"+y')
-map('n', '<leader>p', '"+p')
