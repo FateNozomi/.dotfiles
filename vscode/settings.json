@@ -1,115 +1,36 @@
 {
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "commands": [
-        ":nohl"
-      ]
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "lineBreakInsert"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "commands": [
-        ":w"
-      ],
-    },
-    {
-      "before": [
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ],
-      "silent": true
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "commands": [
-        "bookmarks.toggle"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "b"
-      ],
-      "commands": [
-        "bookmarks.list"
-      ]
-    }
-  ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-p>": false,
-    "<C-k>": false,
-    "<C-f>": false,
-    "<C-b>": false
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   },
-  "vim.smartRelativeLine": true,
+  "vscode-neovim.ctrlKeysForNormalMode": [
+    "a",
+    "c",
+    "d",
+    "e",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "/",
+    "]",
+    "right",
+    "left",
+    "up",
+    "down",
+    "backspace",
+    "delete"
+  ],
   "files.trimTrailingWhitespace": true,
   "[json][typescript][typescriptreact][html][css]": {
     "editor.tabSize": 2
