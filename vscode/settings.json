@@ -5,6 +5,7 @@
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
   "workbench.startupEditor": "none",
+  "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 6,
   "workbench.externalBrowser": "firefox",
