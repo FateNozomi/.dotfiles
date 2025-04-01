@@ -29,4 +29,3 @@ map('n', '<leader>-', '<CMD>Oil<CR>')
 
 -- FzfLua
 map('n', '<C-p>', '<CMD>FzfLua files<CR>')
-map('n', '<C-k>', '<CMD>FzfLua<CR>')
