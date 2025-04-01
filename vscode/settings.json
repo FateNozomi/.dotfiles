@@ -5,6 +5,8 @@
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
   "workbench.startupEditor": "none",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 6,
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "extensions.experimental.affinity": {
