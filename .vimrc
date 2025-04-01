@@ -46,7 +46,6 @@ set background=dark
 let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_better_performance = 1
 colorscheme gruvbox-material
-let g:lightline={'colorscheme':'gruvbox_material'}
 
 if has("gui_running")
   set guifont=Cascadia\ Mono:h11
