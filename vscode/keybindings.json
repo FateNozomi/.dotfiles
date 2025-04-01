@@ -1,10 +1,5 @@
 [
   {
-    "key": "-",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
     "key": "ctrl+d",
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
@@ -27,9 +22,5 @@
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
     "args": "<C-b>"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "harpoon-vscode.goToHarpoon"
   }
 ]

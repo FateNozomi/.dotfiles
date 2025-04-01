@@ -7,6 +7,7 @@
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
@@ -18,6 +19,7 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
+  "vscode-neovim.compositeTimeout": 1000,
   // Prettier
   "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
     "editor.tabSize": 2,
