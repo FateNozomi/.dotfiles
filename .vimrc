@@ -1,9 +1,10 @@
 let mapleader = "\\"
 nmap <leader>s :source ~/.vimrc<cr>
+nmap <C-n> :noh<cr>
+nmap <leader>w :w!<cr>
 nmap <leader>c :w !clip.exe<cr>
 vmap <leader>c :w !clip.exe<cr>
 nmap <leader>t :bo term<cr>
-nmap <leader>w :w!<cr>
 nmap <leader>- :Ve .<cr>
 nmap <leader>= :E<cr>
 
@@ -17,6 +18,7 @@ set shiftwidth=4
 set expandtab
 set ignorecase
 set smartcase
+set hlsearch
 
 set laststatus=2
 filetype plugin indent on
