@@ -4,6 +4,9 @@ function hc {
     Clear-Content (Get-PSReadlineOption).HistorySavePath
     Clear-History
 }
+function lfcd {
+    lf -print-last-dir $args | Set-Location
+}
 function ju {
     cd C:\SC4\BFG.Jump
 }
