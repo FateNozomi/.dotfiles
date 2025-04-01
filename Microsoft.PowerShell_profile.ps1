@@ -8,7 +8,7 @@ function hc {
 function lfcd {
     lf -print-last-dir $args | Set-Location
 }
-function fd {
+function zcd {
     $fzPath = $(fzf)
     if ($fzPath -ne $null) {
         Set-Location (Get-Item $fzPath).Directory.FullName
