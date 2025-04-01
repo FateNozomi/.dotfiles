@@ -41,6 +41,16 @@
         "lineBreakInsert"
       ],
       "silent": true
+    },
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ],
+      "silent": true
     }
   ],
   "vim.leader": "<space>",
