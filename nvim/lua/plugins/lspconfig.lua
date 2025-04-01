@@ -4,12 +4,6 @@ return {
     dependencies = {
       { "saghen/blink.cmp" },
       {
-        "seblyng/roslyn.nvim",
-        ft = "cs",
-        opts = {
-        },
-      },
-      {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
         opts = {
