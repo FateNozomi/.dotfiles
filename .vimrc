@@ -63,5 +63,5 @@ nmap <leader>p "+p
 nmap <C-p> :Files<cr>
 
 " Visual Studio
-map gi :vsc Edit.GoToImplementation<cr>
+map gI :vsc Edit.GoToImplementation<cr>
 map gr :vsc Edit.FindAllReferences<cr>
