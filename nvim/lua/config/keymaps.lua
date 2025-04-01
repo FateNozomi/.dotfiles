@@ -63,3 +63,10 @@ map('n', '<leader>fh', '<CMD>FzfLua helptags<CR>', { desc = 'FzfLua Help Tags' }
 map('n', '<leader>la', '<CMD>FzfLua lsp_code_actions<CR>', { desc = 'Code action' })
 map('n', '<leader>lr', '<CMD>FzfLua lsp_references<CR>', { desc = 'Find All References' })
 map('n', '<leader>lI', '<CMD>FzfLua lsp_implementations<CR>', { desc = 'Find All Implementations' })
+
+-- vscode Harpoon
+if vim.g.vscode then
+  map('n', '<leader>hh', "<CMD>lua require('vscode').action('harpoon-vscode.addToHarpoon')<CR>")
+  map('n', '<C-h>', "<CMD>lua require('vscode').action('harpoon-vscode.goToHarpoon')<CR>")
+  map('n', '<leader>he', "<CMD>lua require('vscode').action('harpoon-vscode.editHarpoon')<CR>")
+end
