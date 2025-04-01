@@ -2,7 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      { 'saghen/blink.cmp' },
+      { "saghen/blink.cmp" },
       {
         "seblyng/roslyn.nvim",
         ft = "cs",
