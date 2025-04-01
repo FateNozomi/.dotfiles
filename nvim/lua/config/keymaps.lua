@@ -30,9 +30,10 @@ end
 
 -- LSP
 if not vim.g.vscode then
-  map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
-  map("n", "gr", vim.lsp.buf.references, { desc = "Find All References" })
-  map("n", "gI", vim.lsp.buf.implementation, { desc = "Find All Implementations" })
+  map("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
+  map("n", "gD", vim.lsp.buf.declaration, { desc = "Goto declaration" })
+  map("n", "gr", vim.lsp.buf.references, { desc = "References" })
+  map("n", "gI", vim.lsp.buf.implementation, { desc = "Goto Implementations" })
   map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
   map("n", "<leader>fd", vim.lsp.buf.format, { desc = "Format Buffer" })
 else
@@ -63,18 +64,6 @@ if not vim.g.vscode then
 else
   map("n", "-", "<CMD>lua require('vscode').action('workbench.view.explorer')<CR>")
 end
-
--- FzfLua
-map("n", "<C-p>", "<CMD>FzfLua files<CR>")
-map("n", "<leader>f?", "<CMD>FzfLua<CR>", { desc = "FzfLua Builtin" })
-map("n", "<leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "FzfLua Live Grep" })
-map("n", "<leader>fb", "<CMD>FzfLua buffers<CR>", { desc = "FzfLua Buffers" })
-map("n", "<leader>fo", "<CMD>FzfLua oldfiles<CR>", { desc = "FzfLua Oldfiles" })
-map("n", "<leader>fh", "<CMD>FzfLua helptags<CR>", { desc = "FzfLua Help Tags" })
-
-map("n", "<leader>la", "<CMD>FzfLua lsp_code_actions<CR>", { desc = "Code action" })
-map("n", "<leader>lr", "<CMD>FzfLua lsp_references<CR>", { desc = "Find All References" })
-map("n", "<leader>lI", "<CMD>FzfLua lsp_implementations<CR>", { desc = "Find All Implementations" })
 
 -- vscode Harpoon
 if vim.g.vscode then
