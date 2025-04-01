@@ -10,8 +10,9 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "[json][jsonc][typescript][typescriptreact][html][css]": {
+  "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "prettier.singleQuote": true
 }
