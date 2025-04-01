@@ -29,13 +29,13 @@ if not vim.g.vscode then
   map('n', 'gr', vim.lsp.buf.references, { desc = 'Find All References' })
   map('n', 'gI', vim.lsp.buf.implementation, { desc = 'Find All Implementations' })
   map('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
-  map('n', '<leader>f', vim.lsp.buf.format, { desc = 'Formats buffer' })
+  map('n', '<leader>fd', vim.lsp.buf.format, { desc = 'Formats buffer' })
 else
   map('n', 'gd', "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
   map('n', 'gr', "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
   map('n', 'gI', "<CMD>lua require('vscode').action('editor.action.goToImplementation')<CR>")
   map('n', '<leader>ca', "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
-  map('n', '<leader>f', "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
+  map('n', '<leader>fd', "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
 end
 
 map('n', 'gR', vim.lsp.buf.rename, { desc = 'Rename Symbol' })
