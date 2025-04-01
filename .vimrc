@@ -1,4 +1,4 @@
-let mapleader = "\\"
+let mapleader = " "
 nmap <leader>s :source ~/.vimrc<cr>
 nmap <C-n> :noh<cr>
 nmap <leader>w :w!<cr>
