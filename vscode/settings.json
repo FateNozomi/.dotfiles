@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.defaultLocation": "editor",
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
