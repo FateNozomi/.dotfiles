@@ -4,6 +4,7 @@
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
   "editor.formatOnSave": true,
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
