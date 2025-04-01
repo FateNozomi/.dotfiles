@@ -63,7 +63,10 @@ return {
       },
       -- search
       { "<leader>s?", function() Snacks.picker() end, desc = "Snacks Picker" },
+      { '<leader>s"', function() Snacks.picker.registers() end, desc = "Registers" },
+      { "<leader>s/", function() Snacks.picker.search_history() end, desc = "Search History" },
       { "<leader>sh", function() Snacks.picker.help() end, desc = "Help Pages" },
+      { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
       { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
       -- LSP
       { "<leader>ld", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
