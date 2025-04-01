@@ -3,7 +3,7 @@ return {
     "nvim-neotest/neotest",
     optional = true,
     dependencies = {
-      "Issafalcon/neotest-dotnet",
+      { "fatenozomi/neotest-dotnet", branch = "dev" },
     },
     opts = {
       adapters = {
