@@ -56,9 +56,10 @@ nmap <leader>w :w!<cr>
 nmap <leader>t :bo term<cr>
 nmap <leader>- :E<cr>
 
-nmap <leader>y "+Y
+nmap <leader>y "+yy
 vmap <leader>y "+y
 nmap <leader>p "+p
+nmap <leader>P "+P
 vmap <leader>p "+p
 
 nmap <C-p> :Files<cr>
