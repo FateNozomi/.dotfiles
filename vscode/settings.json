@@ -77,6 +77,15 @@
     {
       "before": [
         "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
         "m"
       ],
       "commands": [
