@@ -1,9 +1,9 @@
 return {
   {
-    'echasnovski/mini.files',
-    version = '*',
+    "echasnovski/mini.files",
+    version = "*",
     config = function()
-      require('mini.files').setup()
-    end
-  }
+      require("mini.files").setup()
+    end,
+  },
 }

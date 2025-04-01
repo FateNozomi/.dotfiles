@@ -3,5 +3,5 @@ require("config.lazy")
 require("config.keymaps")
 
 if not vim.g.vscode then
-  vim.cmd.colorscheme "catppuccin"
+  vim.cmd.colorscheme("catppuccin")
 end

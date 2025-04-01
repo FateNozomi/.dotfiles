@@ -48,8 +48,8 @@ return {
       config = {
         on_attach = function(client)
           monkey_patch_semantic_tokens(client)
-        end
+        end,
       },
     },
-  }
+  },
 }
