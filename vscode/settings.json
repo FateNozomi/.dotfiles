@@ -3,7 +3,7 @@
     "asvetliakov.vscode-neovim": 1
   },
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.autohide": true,
   "[json][jsonc][typescript][typescriptreact][html][css]": {
