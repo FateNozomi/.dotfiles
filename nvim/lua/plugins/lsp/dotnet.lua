@@ -1,3 +1,4 @@
+--- @param client vim.lsp.Client the LSP client
 local function monkey_patch_semantic_tokens(client)
   -- NOTE: Super hacky... Don't know if I like that we set a random variable on
   -- the client Seems to work though
@@ -15,16 +16,16 @@ local function monkey_patch_semantic_tokens(client)
 
   -- monkey patch the request proxy
   local request_inner = client.request
-  client.request = function(method, params, handler, req_bufnr)
+  function client:request(method, params, handler, req_bufnr)
     if method ~= vim.lsp.protocol.Methods.textDocument_semanticTokens_full then
-      return request_inner(method, params, handler)
+      return request_inner(self, method, params, handler)
     end
 
     local target_bufnr = vim.uri_to_bufnr(params.textDocument.uri)
     local line_count = vim.api.nvim_buf_line_count(target_bufnr)
     local last_line = vim.api.nvim_buf_get_lines(target_bufnr, line_count - 1, line_count, true)[1]
 
-    return request_inner("textDocument/semanticTokens/range", {
+    return request_inner(self, "textDocument/semanticTokens/range", {
       textDocument = params.textDocument,
       range = {
         ["start"] = {
@@ -44,6 +45,8 @@ return {
   {
     "seblyng/roslyn.nvim",
     ft = "cs",
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
     opts = {
       config = {
         on_attach = function(client) monkey_patch_semantic_tokens(client) end,
