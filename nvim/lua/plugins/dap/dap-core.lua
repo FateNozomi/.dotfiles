@@ -30,15 +30,7 @@ return {
       { "<leader>dw", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
     },
 
-    config = function()
-      local dap = require("dap")
-
-      dap.adapters.coreclr = {
-        type = "executable",
-        command = "netcoredbg",
-        args = { "--interpreter=vscode" },
-      }
-    end,
+    config = function() end,
   },
 
   -- fancy UI for the debugger
