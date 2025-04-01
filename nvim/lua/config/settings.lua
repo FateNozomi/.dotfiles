@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Enable mouse mode
+vim.opt.mouse = "a"
+
 -- Make line numbers default
 vim.opt.number = true
 
