@@ -1,7 +1,4 @@
 {
-  // Color Theme
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "catppuccin.accentColor": "rosewater",
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -15,6 +12,9 @@
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
+  // Color Theme
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.accentColor": "rosewater",
   // Neovim
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
