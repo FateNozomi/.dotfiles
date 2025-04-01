@@ -60,6 +60,16 @@
         "editor.action.goToImplementation"
       ],
       "silent": true
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ],
+      "silent": true
     }
   ],
   "vim.leader": "<space>",
