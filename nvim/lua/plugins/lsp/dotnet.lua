@@ -45,11 +45,9 @@ return {
     "seblyng/roslyn.nvim",
     ft = "cs",
     opts = {
-      -- config = {
-      --   on_attach = function(client)
-      --     monkey_patch_semantic_tokens(client)
-      --   end,
-      -- },
+      config = {
+        on_attach = function(client) monkey_patch_semantic_tokens(client) end,
+      },
     },
   },
 }
