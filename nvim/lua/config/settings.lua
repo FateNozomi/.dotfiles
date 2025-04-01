@@ -33,10 +33,10 @@ vim.opt.scrolloff = 10
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-map('n', '<leader>n', '<cmd>nohlsearch<CR>')
+map('n', '<leader>n', '<CMD>nohlsearch<CR>')
 
 -- Writes file
-map('n', '<leader>w', '<cmd>w<CR>')
+map('n', '<leader>w', '<CMD>w<CR>')
 
 -- Copy to system clipboard
 map('n', '<leader>y', '"+Y')
