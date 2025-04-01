@@ -22,5 +22,9 @@
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
     "args": "<C-b>"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "harpoon-vscode.goToHarpoon"
   }
 ]
