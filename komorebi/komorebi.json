@@ -53,5 +53,17 @@
         }
       ]
     }
+  ],
+  "float_rules": [
+    {
+      "kind": "Title",
+      "id": "WindowsFormsParkingWindow",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Search everywhere",
+      "matching_strategy": "Equals"
+    }
   ]
 }
