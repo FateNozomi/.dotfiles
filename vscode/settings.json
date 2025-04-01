@@ -45,9 +45,10 @@
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
-    "<C-f>": false,
+    "<C-p>": false,
     "<C-k>": false,
-    "<C-p>": false
+    "<C-f>": false,
+    "<C-b>": false
   },
   "files.trimTrailingWhitespace": true,
   "[json]": {
