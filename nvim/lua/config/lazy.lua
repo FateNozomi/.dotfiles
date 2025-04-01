@@ -18,9 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
   defaults = {
-    cond = function(plugin)
-      return not vim.g.vscode or plugin.vscode
-    end,
+    cond = function(plugin) return not vim.g.vscode or plugin.vscode end,
   },
   spec = {
     -- import your plugins
@@ -29,7 +27,7 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
