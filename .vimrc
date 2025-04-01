@@ -47,7 +47,6 @@ if has("gui_running")
   set columns=100
   set guioptions-=T
   set guioptions-=e
-  set shell=pwsh
 endif
 
 nmap <leader>s :source ~/.vimrc<cr>
