@@ -16,5 +16,3 @@ New-Item -Path $env:APPDATA\mpv\mpv.conf -ItemType SymbolicLink -Value $HOME\.do
 $PICTURES = [environment]::getfolderpath("mypictures")
 New-Item -Path $env:APPDATA\mpv\screenshots -ItemType SymbolicLink -Value $PICTURES\screenshots
 
-# komorebi
-New-Item -Path $HOME\komorebi.json -ItemType SymbolicLink -Value $HOME\.dotfiles\komorebi\komorebi.json
