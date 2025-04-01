@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "Kanagawa (Gogh)"
 config.font = wezterm.font("CaskaydiaCove Nerd Font Mono")
-config.font_size = 11.5
+config.font_size = 12.0
 
 config.enable_scroll_bar = true
 config.default_domain = "WSL:Ubuntu"
