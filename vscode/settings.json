@@ -13,9 +13,6 @@
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
-  // Color Theme
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "catppuccin.accentColor": "rosewater",
   // Neovim
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
