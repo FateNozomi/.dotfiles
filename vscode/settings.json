@@ -2,7 +2,6 @@
   // Color Theme
   "workbench.colorTheme": "Catppuccin Mocha",
   "catppuccin.accentColor": "rosewater",
-
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -11,16 +10,14 @@
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 3,
+  "workbench.editor.limit.value": 5,
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
-
   // Neovim
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-
   // Prettier
   "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
     "editor.tabSize": 2,
