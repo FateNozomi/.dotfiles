@@ -44,6 +44,15 @@
     },
     {
       "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":w"
+      ],
+    },
+    {
+      "before": [
         "g",
         "i"
       ],
