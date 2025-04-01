@@ -11,7 +11,7 @@
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 6,
+  "workbench.editor.limit.value": 3,
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
