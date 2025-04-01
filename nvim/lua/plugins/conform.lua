@@ -16,7 +16,14 @@ return {
         },
         formatters = {
           stylua = {
-            append_args = { "--indent-type", "Spaces", "--indent-width", "2" },
+            append_args = {
+              "--indent-type",
+              "Spaces",
+              "--indent-width",
+              "2",
+              "--collapse-simple-statement",
+              "FunctionOnly",
+            },
           },
         },
       })
