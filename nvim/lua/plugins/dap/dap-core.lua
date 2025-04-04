@@ -53,33 +53,40 @@ return {
       end
 
       local function set_exception_breakpoints()
-        local filters = vim.g.dap_selected_exception_breakpoint_filters
-        if filters == nil then
+        ---@type ExceptionBreakpointFilters
+        local selected_filters = vim.g.dap_selected_exception_breakpoint_filters
+        if selected_filters == nil then
           return
-        elseif type(filters) == "string" then
-          vim.notify("Exception breakpoint filters: " .. vim.g.dap_selected_exception_breakpoint_filters)
-        elseif filters[1] ~= nil then
-          vim.notify(
-            "Exception breakpoint filters: " .. table.concat(vim.g.dap_selected_exception_breakpoint_filters, ", ")
-          )
         end
-        dap.set_exception_breakpoints(filters)
+
+        ---@type string|string[]
+        local filter = "default"
+        if selected_filters[1] ~= nil then
+          filter = selected_filters
+          vim.notify("Exception breakpoint filters: " .. table.concat(filter, ", "))
+        else
+          vim.notify("Exception breakpoint filters: default")
+        end
+
+        dap.set_exception_breakpoints(filter)
       end
 
+      -- Toggles exception breakpoints between default and all filters
       local function toggle_exception_breakpoints()
         local selected_filters = vim.g.dap_selected_exception_breakpoint_filters
-        if selected_filters == nil or selected_filters == "default" then
+        if selected_filters == nil or next(selected_filters) == nil then
           selected_filters = vim.g.dap_exception_breakpoint_filters
         else
-          selected_filters = "default"
+          selected_filters = {}
         end
 
         vim.g.dap_selected_exception_breakpoint_filters = selected_filters
         set_exception_breakpoints()
       end
 
-      dap.listeners.after["configurationDone"]["exception_breakpoints"] = function(session, _)
+      dap.listeners.after.configurationDone["exception_breakpoints"] = function(session, _)
         vim.g.dap_exception_breakpoint_filters = get_filters(session.capabilities.exceptionBreakpointFilters)
+        set_exception_breakpoints()
       end
 
       vim.keymap.set("n", "<leader>de", toggle_exception_breakpoints, { desc = "Toggle Exception Breakpoint" })
