@@ -6,6 +6,6 @@ vim.opt.title = true
 vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 
 if not vim.g.vscode then
-  vim.cmd.colorscheme("kanagawa")
+  vim.cmd.colorscheme("tokyonight-moon")
   require("config.lsp")
 end
