@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "tokyonight_moon"
 config.font = wezterm.font("CaskaydiaCove Nerd Font Mono")
 config.font_size = 12.0
 
