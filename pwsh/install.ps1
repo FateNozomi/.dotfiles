@@ -9,7 +9,7 @@ New-Item -ItemType SymbolicLink -Path $HOME\.vimrc -Target $HOME\.dotfiles\vim\.
 New-Item -ItemType SymbolicLink -Path $HOME\vimfiles\autoload -Target $HOME\.vim\autoload
 
 # nvim
-New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim -Target $HOME\.dotfiles\nvim
+New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim -Target $HOME\.dotfiles\vscode\nvim
 
 # vscode
 New-Item -ItemType SymbolicLink -Path $env:APPDATA\Code\User\settings.json -Target $HOME\.dotfiles\vscode\settings.json
