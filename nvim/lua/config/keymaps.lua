@@ -29,15 +29,33 @@ map("t", "<M-r>", [['<C-\><C-N>"'.nr2char(getchar()).'pi']], { expr = true })
 
 -- LSP
 map("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
-map("n", "gD", vim.lsp.buf.declaration, { desc = "Goto declaration" })
+map("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Declaration" })
 map("n", "gr", vim.lsp.buf.references, { desc = "References" })
 map("n", "gI", vim.lsp.buf.implementation, { desc = "Goto Implementations" })
-map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
-map("n", "<leader>fd", vim.lsp.buf.format, { desc = "Format Buffer" })
+map("n", "gy", vim.lsp.buf.type_definition, { desc = "Goto T[y]pe Definition" })
+map("n", "gK", vim.lsp.buf.signature_help, { desc = "Display Help" })
+map("n", "gO", vim.lsp.buf.document_symbol, { desc = "Document Symbol" })
 
-map("n", "gR", vim.lsp.buf.rename, { desc = "Rename Symbol" })
-map("n", "gO", vim.lsp.buf.document_symbol, { desc = "Lists all symbols in the current buffer" })
-map("n", "gK", vim.lsp.buf.signature_help, { desc = "Display signature information" })
+map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+map(
+  { "n", "v" },
+  "<leader>cA",
+  function()
+    vim.lsp.buf.code_action({
+      apply = true,
+      context = {
+        only = { "source" },
+        diagnostics = {},
+      },
+    })
+  end,
+  { desc = "Code Actions" }
+)
+map({ "n", "v" }, "<leader>cc", vim.lsp.codelens.run, { desc = "Run Codelens" })
+map("n", "<leader>cC", vim.lsp.codelens.refresh, { desc = "Refresh & Display Codelens" })
+map("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename Symbol" })
+
+map("n", "<leader>fd", vim.lsp.buf.format, { desc = "Format Buffer" })
 
 -- location list
 map("n", "<leader>xl", vim.diagnostic.setloclist, { desc = "Location List" })

@@ -70,9 +70,13 @@ if vim.g.vscode then
   map("n", "gd", "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
   map("n", "gD", "<CMD>lua require('vscode').action('editor.action.revealDeclaration')<CR>")
   map("n", "gr", "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
-  map("n", "gR", "<CMD>lua require('vscode').action('editor.action.rename')<CR>")
   map("n", "gI", "<CMD>lua require('vscode').action('editor.action.goToImplementation')<CR>")
+  map("n", "gy", "<CMD>lua require('vscode').action('editor.action.goToTypeDefinition')<CR>")
+  map("n", "gK", "<CMD>lua require('vscode').action('editor.action.triggerParameterHints')<CR>")
+
   map({ "n", "v" }, "<leader>ca", "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
+  map("n", "<leader>cr", "<CMD>lua require('vscode').action('editor.action.rename')<CR>")
+
   map("n", "<leader>fd", "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
 
   -- vscode Explorer
