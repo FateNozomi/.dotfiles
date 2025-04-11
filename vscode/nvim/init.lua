@@ -34,6 +34,13 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Clear default LSP keymaps
+vim.keymap.del("n", "grn")
+vim.keymap.del("n", "gra")
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "gri")
+vim.keymap.del("n", "gO")
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map("n", "<Esc><Esc>", "<Esc>:nohlsearch<CR>", { desc = "Clear 'hlsearch'", silent = true })
@@ -63,6 +70,7 @@ if vim.g.vscode then
   map("n", "gd", "<CMD>lua require('vscode').action('editor.action.revealDefinition')<CR>")
   map("n", "gD", "<CMD>lua require('vscode').action('editor.action.revealDeclaration')<CR>")
   map("n", "gr", "<CMD>lua require('vscode').action('editor.action.goToReferences')<CR>")
+  map("n", "gR", "<CMD>lua require('vscode').action('editor.action.rename')<CR>")
   map("n", "gI", "<CMD>lua require('vscode').action('editor.action.goToImplementation')<CR>")
   map({ "n", "v" }, "<leader>ca", "<CMD>lua require('vscode').action('editor.action.codeAction')<CR>")
   map("n", "<leader>fd", "<CMD>lua require('vscode').action('editor.action.formatDocument')<CR>")
