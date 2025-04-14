@@ -6,7 +6,10 @@ config.font = wezterm.font("CaskaydiaCove Nerd Font Mono")
 config.font_size = 12.0
 
 config.enable_scroll_bar = true
-config.default_domain = "WSL:Ubuntu"
+
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_domain = "WSL:Ubuntu"
+end
 
 -- Keymaps
 config.keys = {
