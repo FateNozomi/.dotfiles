@@ -2,4 +2,9 @@
 
 # neovim
 ln -s ~/.src/.dotfiles/nvim ~/.config/nvim
-ln -s ~/.src/.dotfiles/tmux/ ~/.config/tmux
+
+# tmux
+ln -s ~/.src/.dotfiles/tmux ~/.config/tmux
+
+# zsh
+ln -s ~/.src/.dotfiles/zsh/.zshrc ~/.zshrc
