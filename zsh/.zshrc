@@ -50,6 +50,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # dotnet
 export DOTNET_ROOT=/usr/lib/dotnet
+export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:/opt/netcoredbg/bin"
 
 # auto-start ssh-agent
