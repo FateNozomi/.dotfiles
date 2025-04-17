@@ -7,8 +7,11 @@ config.font_size = 12.0
 
 config.enable_scroll_bar = true
 
-if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
   config.default_domain = "WSL:Ubuntu"
+else
+  config.initial_rows = 36
+  config.initial_cols = 120
 end
 
 -- Keymaps
