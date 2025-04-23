@@ -12,11 +12,84 @@
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
-  // Neovim
+  // VSCodeVim
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "vscodevim.vim": 1
   },
-  "vscode-neovim.compositeTimeout": 1000,
+  "vim.incsearch": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": true,
+    "<C-b>": false,
+    "<C-j>": false,
+    "<C-k>": false
+  },
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y", "y"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    },
+    {
+      "before": ["<leader>", "P"],
+      "after": ["\"", "+", "P"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "K"],
+      "commands": ["editor.action.triggerParameterHints"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["-"],
+      "commands": ["workbench.view.explorer"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    }
+  ],
   // Prettier
   "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
     "editor.tabSize": 2,
