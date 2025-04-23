@@ -7,8 +7,6 @@
   "editor.wordWrap": "on",
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 5,
   "workbench.externalBrowser": "firefox",
   "files.trimTrailingWhitespace": true,
   "remote.autoForwardPortsSource": "hybrid",
