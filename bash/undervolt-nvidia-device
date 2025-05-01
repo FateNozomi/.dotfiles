@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+from pynvml import *
+nvmlInit()
+deviceHandle = nvmlDeviceGetHandleByIndex(0)
+nvmlDeviceSetGpuLockedClocks(deviceHandle, 210, 1700)
+nvmlDeviceSetGpcClkVfOffset(deviceHandle, 200)
+nvmlDeviceSetPowerManagementLimit(deviceHandle, 300000)
