@@ -3,7 +3,6 @@ Invoke-Expression (&starship init powershell)
 Set-Alias -Name lg -Value lazygit.exe
 Set-Alias -Name nvd -Value neovide
 
-function ho { cd $home }
 function hc {
     Clear-Content (Get-PSReadlineOption).HistorySavePath
     Clear-History
