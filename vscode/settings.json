@@ -1,5 +1,5 @@
 {
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "JetBrains Mono, Symbols Nerd Font Mono",
   "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.autohide": true,
