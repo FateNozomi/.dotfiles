@@ -23,6 +23,15 @@ map("n", "<leader>p", '"+p', { desc = 'Paste text from "+ after the cursor' })
 map("n", "<leader>P", '"+P', { desc = 'Paste text from "+ before the cursor' })
 map("v", "<leader>p", '"+p', { desc = 'Replace text from "+ ' })
 
+-- Copy buffer filename to system clipboard
+map(
+  "n",
+  "<leader>cp",
+  function() vim.fn.setreg("+", vim.fn.expand("%:.")) end,
+  { desc = 'Copy relative filename to "+' }
+)
+map("n", "<leader>cP", function() vim.fn.setreg("+", vim.fn.expand("%:p")) end, { desc = 'Copy buffer filename to "+' })
+
 -- Terminal
 map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, desc = "Terminal normal mode" })
 map("t", "<M-r>", [['<C-\><C-N>"'.nr2char(getchar()).'pi']], { expr = true })
