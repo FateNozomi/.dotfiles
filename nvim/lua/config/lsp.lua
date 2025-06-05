@@ -1,4 +1,5 @@
 vim.lsp.enable({
+  "roslyn",
   "json_ls",
   "lua_ls",
 })
