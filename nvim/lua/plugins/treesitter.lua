@@ -1,8 +1,10 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    lazy = false,
     build = ":TSUpdate",
-    opt = {
+    opts = {
       ensure_installed = {
         "c_sharp",
         "javascript",
@@ -19,7 +21,8 @@ return {
         enable = false,
       },
     },
-    config = function()
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
       vim.wo.foldmethod = "expr"
       vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
       vim.wo.foldlevel = 99
