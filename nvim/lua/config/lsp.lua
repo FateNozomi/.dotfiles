@@ -2,6 +2,7 @@ vim.lsp.enable({
   "roslyn",
   "json_ls",
   "lua_ls",
+  "vtsls",
 })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
