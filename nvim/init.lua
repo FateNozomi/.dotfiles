@@ -5,5 +5,5 @@ require("config.keymaps")
 vim.opt.title = true
 vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 
-vim.cmd.colorscheme("carbonfox")
+vim.cmd.colorscheme("nightfox")
 require("config.lsp")
