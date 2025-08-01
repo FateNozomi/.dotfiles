@@ -1,6 +1,17 @@
+vim.lsp.config("roslyn_ls", {
+  cmd = {
+    "/opt/roslyn/Microsoft.CodeAnalysis.LanguageServer",
+    "--logLevel",
+    "Information",
+    "--extensionLogDirectory",
+    vim.fs.joinpath(vim.uv.os_tmpdir(), "roslyn_ls/logs"),
+    "--stdio",
+  },
+})
+
 vim.lsp.enable({
-  "roslyn",
-  "json_ls",
+  "roslyn_ls",
+  "jsonls",
   "lua_ls",
   "vtsls",
 })
