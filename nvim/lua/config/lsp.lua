@@ -1,4 +1,4 @@
-vim.lsp.config("roslyn_ls", {
+vim.lsp.config("roslyn", {
   cmd = {
     "/opt/roslyn/Microsoft.CodeAnalysis.LanguageServer",
     "--logLevel",
@@ -10,7 +10,6 @@ vim.lsp.config("roslyn_ls", {
 })
 
 vim.lsp.enable({
-  "roslyn_ls",
   "jsonls",
   "lua_ls",
   "vtsls",
