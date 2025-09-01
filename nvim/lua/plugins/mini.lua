@@ -1,3 +1,16 @@
+-- Centered on screen
+local win_config = function()
+  local height = math.floor(0.7 * vim.o.lines)
+  local width = math.floor(0.8 * vim.o.columns)
+  return {
+    anchor = "NW",
+    height = height,
+    width = width,
+    row = math.floor(0.5 * (vim.o.lines - height)),
+    col = math.floor(0.5 * (vim.o.columns - width)),
+  }
+end
+
 return {
   {
     "nvim-mini/mini.nvim",
@@ -8,7 +21,7 @@ return {
       require("mini.surround").setup()
       -- worlkflow
       require("mini.files").setup({ windows = { preview = true } })
-      require("mini.pick").setup()
+      require("mini.pick").setup({ window = { config = win_config } })
       -- appearance
       require("mini.indentscope").setup()
     end,
