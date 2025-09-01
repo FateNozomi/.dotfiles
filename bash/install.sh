@@ -10,6 +10,11 @@ if [ ! -d ~/.config/tmux ]; then
 ln -s ~/.src/.dotfiles/tmux ~/.config/tmux
 fi
 
+# ripgrep
+if [ ! -d ~/.config/ripgrep ]; then
+ln -s ~/.src/.dotfiles/ripgrep/ ~/.config/ripgrep
+fi
+
 # zsh
 ln -s ~/.src/.dotfiles/zsh/.zshrc ~/.zshrc
 
