@@ -22,7 +22,12 @@ return {
       -- worlkflow
       require("mini.files").setup({ windows = { preview = true } })
       require("mini.extra").setup()
-      require("mini.pick").setup({ window = { config = win_config } })
+      require("mini.pick").setup({
+        mappings = {
+          choose_marked = "<C-q>",
+        },
+        window = { config = win_config },
+      })
       -- appearance
       require("mini.indentscope").setup()
     end,
