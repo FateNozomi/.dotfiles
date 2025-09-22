@@ -5,6 +5,7 @@ vim.keymap.del("n", "grn")
 vim.keymap.del("n", "gra")
 vim.keymap.del("n", "grr")
 vim.keymap.del("n", "gri")
+vim.keymap.del("n", "grt")
 vim.keymap.del("n", "gO")
 
 -- Clear highlights on search when pressing <Esc> in normal mode
