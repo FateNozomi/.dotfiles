@@ -75,8 +75,13 @@ return {
           scroll_up = "<C-u>",
         },
       })
-      require("mini.files").setup({ windows = { preview = true } })
+      require("mini.diff").setup({
+        view = {
+          style = "sign",
+        },
+      })
       require("mini.extra").setup()
+      require("mini.files").setup({ windows = { preview = true } })
       require("mini.pick").setup({
         mappings = {
           choose_marked = "<C-q>",
@@ -87,6 +92,8 @@ return {
       require("mini.indentscope").setup()
     end,
     keys = {
+      -- mini.diff
+      { "<leader>gdo", function() MiniDiff.toggle_overlay(0) end, desc = "Toggle Diff Overlay" },
       -- mini.files
       {
         "-",
