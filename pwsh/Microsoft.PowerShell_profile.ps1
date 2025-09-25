@@ -29,3 +29,5 @@ function mpva {
     --term-playing-msg='Title: ${media-title}' `
     $Link
 }
+
+$env:GIT_SSH = "$env:SystemRoot\System32\OpenSSH\ssh.exe"
