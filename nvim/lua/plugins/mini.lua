@@ -1,16 +1,3 @@
--- Centered on screen
-local minipick_win_config = function()
-  local height = math.floor(0.7 * vim.o.lines)
-  local width = math.floor(0.8 * vim.o.columns)
-  return {
-    anchor = "NW",
-    height = height,
-    width = width,
-    row = math.floor(0.5 * (vim.o.lines - height)),
-    col = math.floor(0.5 * (vim.o.columns - width)),
-  }
-end
-
 return {
   {
     "nvim-mini/mini.nvim",
@@ -86,7 +73,7 @@ return {
         mappings = {
           choose_marked = "<C-q>",
         },
-        window = { config = minipick_win_config },
+        window = { config = { width = vim.o.columns } },
       })
       -- appearance
       require("mini.indentscope").setup()
