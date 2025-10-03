@@ -59,7 +59,7 @@ map(
       },
     })
   end,
-  { desc = "Code Actions" }
+  { desc = "Source Actions" }
 )
 map({ "n", "v" }, "<leader>cc", vim.lsp.codelens.run, { desc = "Run Codelens" })
 map("n", "<leader>cC", vim.lsp.codelens.refresh, { desc = "Refresh & Display Codelens" })
