@@ -76,6 +76,13 @@ return {
         window = { config = { width = vim.o.columns } },
       })
       -- appearance
+      local hipatterns = require("mini.hipatterns")
+      hipatterns.setup({
+        highlighters = {
+          -- Highlight hex color strings (`#rrggbb`) using that color
+          hex_color = hipatterns.gen_highlighter.hex_color(),
+        },
+      })
       require("mini.indentscope").setup()
     end,
     keys = {
