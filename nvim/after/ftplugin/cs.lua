@@ -6,7 +6,7 @@ vim.g.dotnet_errors_only = true
 vim.g.dotnet_show_project_file = false
 vim.cmd("compiler dotnet")
 
-if vim.fn.has("win32") then
+if vim.fn.has("win32") == 1 then
   vim.opt.shell = "pwsh"
   vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
     .. "[Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();"
