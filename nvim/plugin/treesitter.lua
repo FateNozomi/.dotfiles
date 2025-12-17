@@ -42,3 +42,7 @@ _G.Config.now_if_args(function()
   local ts_start = function(ev) vim.treesitter.start(ev.buf) end
   _G.Config.new_autocmd("FileType", filetypes, ts_start, "Start tree-sitter")
 end)
+
+-- C Compiler for Windows
+-- `winget install -e --id BrechtSanders.WinLibs.POSIX.UCRT`
+-- $env:CC="gcc"
