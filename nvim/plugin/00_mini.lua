@@ -288,15 +288,15 @@ later(function() require("mini.indentscope").setup() end)
 --
 -- NOTE: Might introduce lag on very big buffers (10000+ lines)
 later(function()
-  local map = require("mini.map")
-  map.setup({
+  local minimap = require("mini.map")
+  minimap.setup({
     -- Use Braille dots to encode text
-    symbols = { encode = map.gen_encode_symbols.dot("4x2") },
+    symbols = { encode = minimap.gen_encode_symbols.dot("4x2") },
     -- Show built-in search matches, 'mini.diff' hunks, and diagnostic entries
     integrations = {
-      map.gen_integration.builtin_search(),
-      map.gen_integration.diff(),
-      map.gen_integration.diagnostic(),
+      minimap.gen_integration.builtin_search(),
+      minimap.gen_integration.diff(),
+      minimap.gen_integration.diagnostic(),
     },
   })
 
