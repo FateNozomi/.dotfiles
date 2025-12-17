@@ -40,6 +40,10 @@ if [ -f /opt/win32yank/bin/win32yank.exe ]; then
     export PATH="$PATH:/opt/win32yank/bin"
 fi
 
+if [ -f /opt/roslyn/Microsoft.CodeAnalysis.LanguageServer ]; then
+    export PATH="$PATH:/opt/roslyn"
+fi
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
