@@ -24,7 +24,7 @@ vim.o.pumheight = 10 -- Make popup menu smaller
 vim.o.ruler = false -- Don't show cursor coordinates
 vim.o.showmode = false -- Don't show mode in command line
 vim.o.signcolumn = "yes" -- Always show signcolumn (less flicker)
-vim.o.winborder = "single" -- Use border in floating windows
+vim.o.winborder = "rounded" -- Use border in floating windows
 vim.o.wrap = false -- Don't visually wrap lines (toggle with \w)
 
 vim.o.cursorlineopt = "screenline,number" -- Show cursor line per screen line
