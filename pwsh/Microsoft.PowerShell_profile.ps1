@@ -45,4 +45,6 @@ function mpva {
         $Link
 }
 
+fnm env --use-on-cd | Out-String | Invoke-Expression
+
 $env:GIT_SSH = "$env:SystemRoot\System32\OpenSSH\ssh.exe"
