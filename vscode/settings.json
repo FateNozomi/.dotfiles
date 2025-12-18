@@ -36,15 +36,15 @@
       "commands": [":w"]
     },
     {
-      "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y", "y"]
+      "before": ["g", "y"],
+      "after": ["\"", "+", "y"]
     },
     {
-      "before": ["<leader>", "p"],
+      "before": ["g", "p"],
       "after": ["\"", "+", "p"]
     },
     {
-      "before": ["<leader>", "P"],
+      "before": ["g", "P"],
       "after": ["\"", "+", "P"]
     },
     {
@@ -52,32 +52,32 @@
       "commands": ["editor.action.showHover"]
     },
     {
-      "before": ["g", "D"],
-      "commands": ["editor.action.revealDeclaration"]
+      "before": ["<leader>", "l", "a"],
+      "commands": ["editor.action.codeAction"]
     },
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
-    },
-    {
-      "before": ["g", "I"],
+      "before": ["<leader>", "l", "i"],
       "commands": ["editor.action.goToImplementation"]
     },
     {
-      "before": ["g", "y"],
+      "before": ["<leader>", "l", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "l", "s"],
+      "commands": ["editor.action.goToDeclaration"]
+    },
+    {
+      "before": ["<leader>", "l", "t"],
       "commands": ["editor.action.goToTypeDefinition"]
     },
     {
       "before": ["g", "K"],
       "commands": ["editor.action.triggerParameterHints"]
-    },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.codeAction"]
-    },
-    {
-      "before": ["<leader>", "c", "r"],
-      "commands": ["editor.action.rename"]
     },
     {
       "before": ["-"],
@@ -86,12 +86,12 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "y"],
+      "before": ["g", "y"],
       "after": ["\"", "+", "y"]
     },
     {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "p"]
+      "before": ["g", "p"],
+      "after": ["\"", "+", "P"]
     }
   ],
   // Prettier
