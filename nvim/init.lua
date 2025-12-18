@@ -28,3 +28,14 @@ _G.Config.now_if_args = vim.fn.argc(-1) > 0 and MiniDeps.now or MiniDeps.later
 
 require("options")
 require("keymaps")
+
+if vim.fn.has("win32") == 1 then
+  vim.opt.shell = "pwsh"
+  vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+    .. "[Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();"
+    .. "$PSDefaultParameterValues['Out-File:Encoding']='utf8';"
+    .. "$PSStyle.OutputRendering = 'PlainText';"
+  vim.opt.shellpipe = "> %s 2>&1"
+  vim.opt.shellquote = ""
+  vim.opt.shellxquote = ""
+end
