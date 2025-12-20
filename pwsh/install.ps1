@@ -11,6 +11,9 @@ New-Item -ItemType SymbolicLink -Path $HOME\vimfiles\autoload -Target $HOME\.vim
 # nvim
 New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim -Target $HOME\.src\.dotfiles\vscode\nvim
 
+# neovide
+New-Item -ItemType SymbolicLink -Path $env:APPDATA\neovide\config.toml -Target $HOME\.src\.dotfiles\neovide\config.toml
+
 # vscode
 New-Item -ItemType SymbolicLink -Path $env:APPDATA\Code\User\settings.json -Target $HOME\.src\.dotfiles\vscode\settings.json
 New-Item -ItemType SymbolicLink -Path $env:APPDATA\Code\User\keybindings.json -Target $HOME\.src\.dotfiles\vscode\keybindings.json
