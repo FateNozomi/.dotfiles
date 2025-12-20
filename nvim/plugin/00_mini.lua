@@ -345,7 +345,12 @@ later(function()
   nmap_leader("f:", '<Cmd>Pick history scope=":"<CR>', '":" history')
   nmap_leader("fa", '<Cmd>Pick git_hunks scope="staged"<CR>', "Added hunks (all)")
   nmap_leader("fA", pick_added_hunks_buf, "Added hunks (buf)")
-  nmap_leader("fb", "<Cmd>Pick buffers<CR>", "Buffers")
+  -- nmap_leader("fb", "<Cmd>Pick buffers<CR>", "Buffers")
+  nmap_leader("fb", function()
+    local wipeout_cur = function() vim.api.nvim_buf_delete(MiniPick.get_picker_matches().current.bufnr, {}) end
+    local buffer_mappings = { wipeout = { char = "<C-d>", func = wipeout_cur } }
+    MiniPick.builtin.buffers(nil, { mappings = buffer_mappings })
+  end, "Buffers")
   nmap_leader("fc", "<Cmd>Pick git_commits<CR>", "Commits (all)")
   nmap_leader("fC", '<Cmd>Pick git_commits path="%"<CR>', "Commits (buf)")
   nmap_leader("fd", '<Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace")
