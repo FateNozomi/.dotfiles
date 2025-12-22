@@ -14,7 +14,7 @@ _G.Config.leader_group_clues = {
   { mode = "n", keys = "<Leader>m", desc = "+Map" },
   { mode = "n", keys = "<Leader>o", desc = "+Other" },
   { mode = "n", keys = "<Leader>s", desc = "+Session" },
-  { mode = "n", keys = "<Leader>t", desc = "+Terminal" },
+  { mode = "n", keys = "<Leader>t", desc = "+Test" },
   { mode = "n", keys = "<Leader>v", desc = "+Visits" },
 
   { mode = "x", keys = "<Leader>g", desc = "+Git" },

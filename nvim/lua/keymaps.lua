@@ -38,9 +38,8 @@ nmap_leader("lt", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", "Type definition
 
 xmap_leader("lf", formatting_cmd, "Format selection")
 
--- t is for 'Terminal'
-nmap_leader("tT", "<Cmd>horizontal term<CR>", "Terminal (horizontal)")
-nmap_leader("tt", "<Cmd>vertical term<CR>", "Terminal (vertical)")
+-- o is for 'other'
+nmap_leader("oT", "<Cmd>horizontal term<CR>", "Terminal (horizontal)")
 
 -- e is for 'Explore' and 'Edit'
 local edit_lua_file = function(filename)
