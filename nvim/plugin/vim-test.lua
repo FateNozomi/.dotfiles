@@ -1,5 +1,8 @@
 MiniDeps.later(function()
-  MiniDeps.add("vim-test/vim-test")
+  MiniDeps.add({
+    source = "fatenozomi/vim-test",
+    checkout = "dev",
+  })
   vim.g["test#strategy"] = "neovim"
 
   -- t is for 'Test'
