@@ -24,8 +24,18 @@ map("x", "gp", '"+P', { desc = "Paste from system clipboard" })
 -- NOTE: most LSP mappings represent a more structured way of replacing built-in
 -- LSP mappings (like `:h gra` and others). This is needed because `gr` is mapped
 -- by an "replace" operator in 'mini.operators' (which is more commonly used).
+local source_action = function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = {
+      only = { "source" },
+      diagnostics = {},
+    },
+  })
+end
 local formatting_cmd = '<Cmd>lua require("conform").format({lsp_fallback=true})<CR>'
 
+nmap_leader("lA", source_action, "Source Actions")
 nmap_leader("la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions")
 nmap_leader("ld", "<Cmd>lua vim.diagnostic.open_float()<CR>", "Diagnostic popup")
 nmap_leader("lf", formatting_cmd, "Format")
