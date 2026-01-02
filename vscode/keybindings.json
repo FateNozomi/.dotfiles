@@ -1,35 +1,12 @@
 [
   {
-    "key": "ctrl+d",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
-    "args": "<C-d>"
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
   },
   {
-    "key": "ctrl+u",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
-    "args": "<C-u>"
-  },
-  {
-    "key": "ctrl+f",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'",
-    "args": "<C-f>"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-vscode-neovim.ctrl-b",
-    "when": "editorTextFocus && neovim.ctrlKeysNormal.b && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && neovim.ctrlKeysNormal.j && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && neovim.ctrlKeysInsert.j && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
   }
 ]
