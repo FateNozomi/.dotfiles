@@ -9,6 +9,9 @@ MiniDeps.later(function()
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
       yaml = { "prettierd", "prettier", stop_after_first = true },
     },
+    default_format_opts = {
+      lsp_format = "fallback",
+    },
     format_on_save = function(bufnr)
       -- Disable with a global or buffer-local variable
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
@@ -48,4 +51,6 @@ MiniDeps.later(function()
   end, {
     desc = "Re-enable autoformat-on-save",
   })
+
+  vim.keymap.set({ "n", "x" }, "<leader>lf", '<Cmd>lua require("conform").format()<CR>', { desc = "Format" })
 end)
