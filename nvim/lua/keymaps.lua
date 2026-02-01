@@ -56,18 +56,13 @@ local edit_lua_file = function(filename)
   return string.format("<Cmd>edit %s/lua/%s<CR>", vim.fn.stdpath("config"), filename)
 end
 
-local explore_quickfix = function()
-  for _, win_id in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
-    if vim.fn.getwininfo(win_id)[1].quickfix == 1 then
-      return vim.cmd("cclose")
-    end
-  end
-  vim.cmd("copen")
-end
+local explore_quickfix = function() vim.cmd(vim.fn.getqflist({ winid = true }).winid ~= 0 and "cclose" or "copen") end
+
+local explore_locations = function() vim.cmd(vim.fn.getloclist(0, { winid = true }).winid ~= 0 and "lclose" or "lopen") end
 
 nmap_leader("eci", "<Cmd>edit $MYVIMRC<CR>", "init.lua")
 nmap_leader("eck", edit_lua_file("keymaps.lua"), "Keymaps config")
 nmap_leader("eco", edit_lua_file("options.lua"), "Options config")
-nmap_leader("el", vim.diagnostic.setloclist, "Location List")
 nmap_leader("eq", explore_quickfix, "Quickfix List")
+nmap_leader("eQ", explore_locations, "Location list")
 map("t", "<C-o>", "<C-\\><C-n>", { desc = "Terminal Normal Mode" })
