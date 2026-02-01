@@ -90,3 +90,6 @@ fi
 unset env
 
 eval "$(starship init zsh)"
+
+# java
+export PATH="$PATH:/usr/lib/jvm/default/bin"
