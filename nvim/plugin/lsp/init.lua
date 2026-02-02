@@ -8,5 +8,6 @@ _G.Config.now_if_args(function()
   vim.lsp.enable({
     "lua_ls",
     "jsonls",
+    "vtsls",
   })
 end)
