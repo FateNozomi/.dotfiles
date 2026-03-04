@@ -4,12 +4,7 @@ Config.now_if_args(function()
     -- Update tree-sitter parser after plugin is updated
     hooks = { post_checkout = function() vim.cmd("TSUpdate") end },
   })
-  MiniDeps.add({
-    source = "nvim-treesitter/nvim-treesitter-textobjects",
-    -- Use `main` branch since `master` branch is frozen, yet still default
-    -- It is needed for compatibility with 'nvim-treesitter' `main` branch
-    checkout = "main",
-  })
+  MiniDeps.add("nvim-treesitter/nvim-treesitter-textobjects")
 
   -- Define languages which will have parsers installed and auto enabled
   local languages = {
@@ -21,7 +16,7 @@ Config.now_if_args(function()
     -- To see available languages:
     -- - Execute `:=require('nvim-treesitter').get_available()`
     -- - Visit 'SUPPORTED_LANGUAGES.md' file at
-    --   https://github.com/nvim-treesitter/nvim-treesitter/blob/main
+    --   https://github.com/nvim-treesitter/nvim-treesitter
     "c_sharp",
     "typescript",
   }
