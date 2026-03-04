@@ -1,4 +1,4 @@
-_G.Config.now_if_args(function()
+Config.now_if_args(function()
   MiniDeps.add("neovim/nvim-lspconfig")
 
   -- Use `:h vim.lsp.enable()` to automatically enable language server based on

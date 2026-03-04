@@ -67,10 +67,10 @@ vim.o.completeopt = "menuone,noselect,fuzzy,nosort" -- Use custom behavior
 -- Don't auto-wrap comments and don't insert comment leader after hitting 'o'.
 -- Do on `FileType` to always override these changes from filetype plugins.
 local f = function() vim.cmd("setlocal formatoptions-=c formatoptions-=o") end
-_G.Config.new_autocmd("FileType", nil, f, "Proper 'formatoptions'")
+Config.new_autocmd("FileType", nil, f, "Proper 'formatoptions'")
 
 local textYankPost = function() vim.hl.on_yank({ higroup = "Visual", timeout = 300 }) end
-_G.Config.new_autocmd("TextYankPost", nil, textYankPost, "Highlight yanked text")
+Config.new_autocmd("TextYankPost", nil, textYankPost, "Highlight yanked text")
 
 -- Diagnostics
 

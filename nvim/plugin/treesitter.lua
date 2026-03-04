@@ -1,4 +1,4 @@
-_G.Config.now_if_args(function()
+Config.now_if_args(function()
   MiniDeps.add({
     source = "nvim-treesitter/nvim-treesitter",
     -- Update tree-sitter parser after plugin is updated
@@ -39,7 +39,7 @@ _G.Config.now_if_args(function()
     end
   end
   local ts_start = function(ev) vim.treesitter.start(ev.buf) end
-  _G.Config.new_autocmd("FileType", filetypes, ts_start, "Start tree-sitter")
+  Config.new_autocmd("FileType", filetypes, ts_start, "Start tree-sitter")
 end)
 
 -- C Compiler for Windows

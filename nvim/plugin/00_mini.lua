@@ -4,7 +4,7 @@ local map = vim.keymap.set
 local nmap_leader = function(suffix, rhs, desc) vim.keymap.set("n", "<Leader>" .. suffix, rhs, { desc = desc }) end
 local xmap_leader = function(suffix, rhs, desc) vim.keymap.set("x", "<Leader>" .. suffix, rhs, { desc = desc }) end
 
-_G.Config.leader_group_clues = {
+Config.leader_group_clues = {
   { mode = "n", keys = "<Leader>b", desc = "+Buffer" },
   { mode = "n", keys = "<Leader>e", desc = "+Explore/Edit" },
   { mode = "n", keys = "<Leader>ec", desc = "+Config" },
@@ -176,7 +176,7 @@ later(function()
     MiniFiles.set_bookmark("p", minideps_plugins, { desc = "Plugins" })
     MiniFiles.set_bookmark("w", vim.fn.getcwd, { desc = "Working directory" })
   end
-  _G.Config.new_autocmd("User", "MiniFilesExplorerOpen", add_marks, "Add bookmarks")
+  Config.new_autocmd("User", "MiniFilesExplorerOpen", add_marks, "Add bookmarks")
 
   -- e is for 'Explore' and 'Edit'. Common usage:
   -- - `<Leader>ed` - open explorer at current working directory
