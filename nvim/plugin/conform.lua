@@ -13,11 +13,10 @@ MiniDeps.later(function()
       lsp_format = "fallback",
     },
     format_on_save = function(bufnr)
-      -- Disable with a global or buffer-local variable
-      if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-        return
+      -- Enable with a global or buffer-local variable
+      if vim.g.enable_autoformat or vim.b[bufnr].enable_autoformat then
+        return { timeout_ms = 500, lsp_format = "fallback" }
       end
-      return { timeout_ms = 500, lsp_format = "fallback" }
     end,
     formatters = {
       stylua = {
@@ -33,23 +32,23 @@ MiniDeps.later(function()
     },
   })
 
-  vim.api.nvim_create_user_command("FormatDisable", function(args)
+  vim.api.nvim_create_user_command("FormatEnable", function(args)
     if args.bang then
-      -- FormatDisable! will disable formatting just for this buffer
-      vim.b.disable_autoformat = true
+      -- FormatEnable! will enable formatting just for this buffer
+      vim.b.enable_autoformat = true
     else
-      vim.g.disable_autoformat = true
+      vim.g.enable_autoformat = true
     end
   end, {
-    desc = "Disable autoformat-on-save",
+    desc = "Enable autoformat-on-save",
     bang = true,
   })
 
-  vim.api.nvim_create_user_command("FormatEnable", function()
-    vim.b.disable_autoformat = false
-    vim.g.disable_autoformat = false
+  vim.api.nvim_create_user_command("FormatDisable", function()
+    vim.b.enable_autoformat = false
+    vim.g.enable_autoformat = false
   end, {
-    desc = "Re-enable autoformat-on-save",
+    desc = "Disable autoformat-on-save",
   })
 
   vim.keymap.set({ "n", "x" }, "<leader>lf", '<Cmd>lua require("conform").format()<CR>', { desc = "Format" })
