@@ -51,6 +51,41 @@ now(function() require("mini.starter").setup({ header = "" }) end)
 
 now(function() require("mini.statusline").setup() end)
 
+now(function()
+  require("mini.files").setup({ windows = { preview = true } })
+
+  -- Add common bookmarks for every explorer. Example usage inside explorer:
+  -- - `'c` to navigate into your config directory
+  -- - `g?` to see available bookmarks
+  local add_marks = function()
+    MiniFiles.set_bookmark("c", vim.fn.stdpath("config"), { desc = "Config" })
+    local minideps_plugins = vim.fn.stdpath("data") .. "/site/pack/deps/opt"
+    MiniFiles.set_bookmark("p", minideps_plugins, { desc = "Plugins" })
+    MiniFiles.set_bookmark("w", vim.fn.getcwd, { desc = "Working directory" })
+  end
+  Config.new_autocmd("User", "MiniFilesExplorerOpen", add_marks, "Add bookmarks")
+
+  -- e is for 'Explore' and 'Edit'. Common usage:
+  -- - `<Leader>ed` - open explorer at current working directory
+  -- - `<Leader>ef` - open directory of current file (needs to be present on disk)
+  local explore_at_file = "<Cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>"
+  nmap_leader("ed", "<Cmd>lua MiniFiles.open()<CR>", "Directory")
+  nmap_leader("ef", explore_at_file, "File directory")
+
+  local toggle_explore = function()
+    if not MiniFiles.close() then
+      local buf_name = vim.api.nvim_buf_get_name(0)
+      if vim.fn.filereadable(buf_name) then
+        MiniFiles.open(buf_name)
+      else
+        MiniFiles.open()
+      end
+    end
+  end
+
+  map("n", "-", toggle_explore, { desc = "File Explorer" })
+end)
+
 -- # Secondary
 
 later(function() require("mini.extra").setup() end)
@@ -162,41 +197,6 @@ later(function() require("mini.comment").setup() end)
 later(function()
   require("mini.diff").setup()
   nmap_leader("go", "<Cmd>lua MiniDiff.toggle_overlay()<CR>", "Toggle overlay")
-end)
-
-later(function()
-  require("mini.files").setup({ windows = { preview = true } })
-
-  -- Add common bookmarks for every explorer. Example usage inside explorer:
-  -- - `'c` to navigate into your config directory
-  -- - `g?` to see available bookmarks
-  local add_marks = function()
-    MiniFiles.set_bookmark("c", vim.fn.stdpath("config"), { desc = "Config" })
-    local minideps_plugins = vim.fn.stdpath("data") .. "/site/pack/deps/opt"
-    MiniFiles.set_bookmark("p", minideps_plugins, { desc = "Plugins" })
-    MiniFiles.set_bookmark("w", vim.fn.getcwd, { desc = "Working directory" })
-  end
-  Config.new_autocmd("User", "MiniFilesExplorerOpen", add_marks, "Add bookmarks")
-
-  -- e is for 'Explore' and 'Edit'. Common usage:
-  -- - `<Leader>ed` - open explorer at current working directory
-  -- - `<Leader>ef` - open directory of current file (needs to be present on disk)
-  local explore_at_file = "<Cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>"
-  nmap_leader("ed", "<Cmd>lua MiniFiles.open()<CR>", "Directory")
-  nmap_leader("ef", explore_at_file, "File directory")
-
-  local toggle_explore = function()
-    if not MiniFiles.close() then
-      local buf_name = vim.api.nvim_buf_get_name(0)
-      if vim.fn.filereadable(buf_name) then
-        MiniFiles.open(buf_name)
-      else
-        MiniFiles.open()
-      end
-    end
-  end
-
-  map("n", "-", toggle_explore, { desc = "File Explorer" })
 end)
 
 -- Git integration for more straightforward Git actions based on Neovim's state.
