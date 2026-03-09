@@ -4,6 +4,7 @@ MiniDeps.later(function()
     formatters_by_ft = {
       html = { "prettierd", "prettier", stop_after_first = true },
       javascript = { "prettierd", "prettier", stop_after_first = true },
+      json = { "jq" },
       lua = { "stylua" },
       typescript = { "prettierd", "prettier", stop_after_first = true },
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
