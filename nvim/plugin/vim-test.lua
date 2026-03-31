@@ -1,8 +1,5 @@
-MiniDeps.later(function()
-  MiniDeps.add({
-    source = "fatenozomi/vim-test",
-    checkout = "dev",
-  })
+Config.later(function()
+  vim.pack.add({ { src = "https://github.com/fatenozomi/vim-test", version = "dev" } })
   vim.g["test#strategy"] = "neovim"
 
   -- t is for 'Test'

@@ -1,5 +1,5 @@
-MiniDeps.later(function()
-  MiniDeps.add("folke/lazydev.nvim")
+Config.later(function()
+  vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
   require("lazydev").setup({
     library = {
       -- Load luvit types when the `vim.uv` word is found

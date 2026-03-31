@@ -1,5 +1,5 @@
 Config.now_if_args(function()
-  MiniDeps.add("neovim/nvim-lspconfig")
+  vim.pack.add({ "https://github.com/neovim/nvim-lspconfig" })
 
   -- Use `:h vim.lsp.enable()` to automatically enable language server based on
   -- the rules provided by 'nvim-lspconfig'.

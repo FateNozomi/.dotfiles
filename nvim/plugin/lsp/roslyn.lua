@@ -1,1 +1,1 @@
-Config.now_if_args(function() MiniDeps.add("seblyng/roslyn.nvim") end)
+Config.now_if_args(function() vim.pack.add({ "https://github.com/seblyng/roslyn.nvim" }) end)

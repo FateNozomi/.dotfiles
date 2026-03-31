@@ -1,5 +1,5 @@
-MiniDeps.now(function()
-  MiniDeps.add("stevearc/oil.nvim")
+Config.now(function()
+  vim.pack.add({ "https://github.com/stevearc/oil.nvim" })
   require("oil").setup({
     keymaps = {
       ["cd"] = { "actions.cd", mode = "n" },

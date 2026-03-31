@@ -1,10 +1,12 @@
 Config.now_if_args(function()
-  MiniDeps.add({
-    source = "nvim-treesitter/nvim-treesitter",
-    -- Update tree-sitter parser after plugin is updated
-    hooks = { post_checkout = function() vim.cmd("TSUpdate") end },
+  -- Define hook to update tree-sitter parsers after plugin is updated
+  local ts_update = function() vim.cmd("TSUpdate") end
+  Config.on_packchanged("nvim-treesitter", { "update" }, ts_update, ":TSUpdate")
+
+  vim.pack.add({
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
   })
-  MiniDeps.add("nvim-treesitter/nvim-treesitter-textobjects")
 
   -- Define languages which will have parsers installed and auto enabled
   local languages = {

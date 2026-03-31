@@ -1,4 +1,4 @@
-local now, later = MiniDeps.now, MiniDeps.later
+local now, later = Config.now, Config.later
 
 local map = vim.keymap.set
 local nmap_leader = function(suffix, rhs, desc) vim.keymap.set("n", "<Leader>" .. suffix, rhs, { desc = desc }) end
@@ -59,8 +59,8 @@ now(function()
   -- - `g?` to see available bookmarks
   local add_marks = function()
     MiniFiles.set_bookmark("c", vim.fn.stdpath("config"), { desc = "Config" })
-    local minideps_plugins = vim.fn.stdpath("data") .. "/site/pack/deps/opt"
-    MiniFiles.set_bookmark("p", minideps_plugins, { desc = "Plugins" })
+    local vimpack_plugins = vim.fn.stdpath("data") .. "/site/pack/core/opt"
+    MiniFiles.set_bookmark("p", vimpack_plugins, { desc = "Plugins" })
     MiniFiles.set_bookmark("w", vim.fn.getcwd, { desc = "Working directory" })
   end
   Config.new_autocmd("User", "MiniFilesExplorerOpen", add_marks, "Add bookmarks")

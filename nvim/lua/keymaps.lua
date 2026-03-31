@@ -41,6 +41,7 @@ nmap_leader("ld", "<Cmd>lua vim.diagnostic.open_float()<CR>", "Diagnostic popup"
 nmap_leader("lf", formatting_cmd, "Format")
 nmap_leader("li", "<Cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation")
 nmap_leader("lh", "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover")
+nmap_leader("ll", "<Cmd>lua vim.lsp.codelens.run()<CR>", "Lens")
 nmap_leader("ln", "<Cmd>lua vim.lsp.buf.rename()<CR>", "Rename")
 nmap_leader("lr", "<Cmd>lua vim.lsp.buf.references()<CR>", "References")
 nmap_leader("ls", "<Cmd>lua vim.lsp.buf.definition()<CR>", "Source definition")
