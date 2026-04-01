@@ -1,5 +1,5 @@
 Config.later(function()
-  vim.pack.add({ { src = "https://github.com/fatenozomi/vim-test", version = "dev" } })
+  vim.pack.add({ "https://github.com/vim-test/vim-test" })
   vim.g["test#strategy"] = "neovim"
 
   -- t is for 'Test'

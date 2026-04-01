@@ -22,11 +22,11 @@
       "src": "https://github.com/folke/lazydev.nvim"
     },
     "mini.nvim": {
-      "rev": "af5f75c9ce572a4d1f0c77d6fb4ea764d16c1b3c",
+      "rev": "3923662bf3d6ca49a9503f8d7196ea0450983e6a",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "16812abf0e8d8175155f26143a8504e8253e92b0",
+      "rev": "8e2084bf5e40c79c1f42210a6ef96a0a4793a763",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -54,9 +54,8 @@
       "src": "https://github.com/tpope/vim-fugitive"
     },
     "vim-test": {
-      "rev": "ea2be0895291fae6d855768b226c3763b469a91b",
-      "src": "https://github.com/fatenozomi/vim-test",
-      "version": "'dev'"
+      "rev": "7d7a3a220fd46aa24e179bc9a073687e4cf187ac",
+      "src": "https://github.com/vim-test/vim-test"
     }
   }
 }
