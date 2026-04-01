@@ -67,3 +67,5 @@ nmap_leader("eco", edit_lua_file("options.lua"), "Options config")
 nmap_leader("eq", explore_quickfix, "Quickfix List")
 nmap_leader("eQ", explore_locations, "Location list")
 map("t", "<C-o>", "<C-\\><C-n>", { desc = "Terminal Normal Mode" })
+
+nmap_leader("u", '<Cmd>lua require("undotree").open()<CR>', "Undotree")

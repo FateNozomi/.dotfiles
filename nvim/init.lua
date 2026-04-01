@@ -45,3 +45,5 @@ if vim.fn.has("win32") == 1 then
   vim.opt.shellquote = ""
   vim.opt.shellxquote = ""
 end
+
+vim.cmd("packadd nvim.undotree")
