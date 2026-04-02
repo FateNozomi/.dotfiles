@@ -3,7 +3,6 @@
   "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.autohide": "mouseover",
-  "editor.formatOnSave": true,
   "editor.wordWrap": "on",
   "workbench.startupEditor": "none",
   "workbench.activityBar.location": "bottom",
@@ -12,7 +11,7 @@
   "remote.autoForwardPortsSource": "hybrid",
   // VSCodeVim
   "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
+    "vscodevim.vim": 1,
   },
   "vim.incsearch": true,
   "vim.hlsearch": true,
@@ -23,80 +22,81 @@
     "<C-p>": false,
     "<C-b>": false,
     "<C-j>": false,
-    "<C-k>": false
+    "<C-k>": false,
   },
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<Esc>", "<Esc>"],
-      "commands": [":nohl"]
+      "commands": [":nohl"],
     },
     {
       "before": ["<leader>", "w"],
-      "commands": [":w"]
+      "commands": [":w"],
     },
     {
       "before": ["g", "y"],
-      "after": ["\"", "+", "y"]
+      "after": ["\"", "+", "y"],
     },
     {
       "before": ["g", "p"],
-      "after": ["\"", "+", "p"]
+      "after": ["\"", "+", "p"],
     },
     {
       "before": ["g", "P"],
-      "after": ["\"", "+", "P"]
+      "after": ["\"", "+", "P"],
     },
     {
       "before": ["K"],
-      "commands": ["editor.action.showHover"]
+      "commands": ["editor.action.showHover"],
     },
     {
       "before": ["<leader>", "l", "a"],
-      "commands": ["editor.action.codeAction"]
+      "commands": ["editor.action.codeAction"],
     },
     {
       "before": ["<leader>", "l", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "commands": ["editor.action.goToImplementation"],
     },
     {
       "before": ["<leader>", "l", "n"],
-      "commands": ["editor.action.rename"]
+      "commands": ["editor.action.rename"],
     },
     {
       "before": ["<leader>", "l", "r"],
-      "commands": ["editor.action.goToReferences"]
+      "commands": ["editor.action.goToReferences"],
     },
     {
       "before": ["<leader>", "l", "s"],
-      "commands": ["editor.action.goToDeclaration"]
+      "commands": ["editor.action.goToDeclaration"],
     },
     {
       "before": ["<leader>", "l", "t"],
-      "commands": ["editor.action.goToTypeDefinition"]
+      "commands": ["editor.action.goToTypeDefinition"],
     },
     {
       "before": ["g", "K"],
-      "commands": ["editor.action.triggerParameterHints"]
+      "commands": ["editor.action.triggerParameterHints"],
     },
     {
       "before": ["-"],
-      "commands": ["workbench.view.explorer"]
-    }
+      "commands": ["workbench.view.explorer"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["g", "y"],
-      "after": ["\"", "+", "y"]
+      "after": ["\"", "+", "y"],
     },
     {
       "before": ["g", "p"],
-      "after": ["\"", "+", "P"]
-    }
+      "after": ["\"", "+", "P"],
+    },
   ],
+  "vim.showMarksInGutter": true,
   // Prettier
   "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
 }
