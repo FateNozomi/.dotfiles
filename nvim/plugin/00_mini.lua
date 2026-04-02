@@ -47,8 +47,6 @@ now(function()
   nmap_leader("sw", "<Cmd>lua MiniSessions.write()<CR>", "Write current")
 end)
 
-now(function() require("mini.starter").setup({ header = "" }) end)
-
 now(function() require("mini.statusline").setup() end)
 
 now(function()
