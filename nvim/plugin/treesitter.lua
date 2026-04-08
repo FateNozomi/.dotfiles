@@ -1,3 +1,4 @@
+--[[
 Config.now_if_args(function()
   -- Define hook to update tree-sitter parsers after plugin is updated
   local ts_update = function() vim.cmd("TSUpdate") end
@@ -38,6 +39,7 @@ Config.now_if_args(function()
   local ts_start = function(ev) vim.treesitter.start(ev.buf) end
   Config.new_autocmd("FileType", filetypes, ts_start, "Start tree-sitter")
 end)
+]]--
 
 -- C Compiler for Windows
 -- `winget install -e --id BrechtSanders.WinLibs.POSIX.UCRT`
