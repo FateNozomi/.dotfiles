@@ -36,7 +36,7 @@ end
 local formatting_cmd = '<Cmd>lua require("conform").format({lsp_fallback=true})<CR>'
 
 nmap_leader("lA", source_action, "Source Actions")
-nmap_leader("la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions")
+map({ "n", "x" }, "<Leader>la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Actions" })
 nmap_leader("ld", "<Cmd>lua vim.diagnostic.open_float()<CR>", "Diagnostic popup")
 nmap_leader("lf", formatting_cmd, "Format")
 nmap_leader("li", "<Cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation")
