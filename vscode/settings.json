@@ -68,7 +68,7 @@
     },
     {
       "before": ["<leader>", "l", "s"],
-      "commands": ["editor.action.goToDeclaration"],
+      "commands": ["editor.action.revealDefinition"],
     },
     {
       "before": ["<leader>", "l", "t"],
@@ -82,6 +82,14 @@
       "before": ["-"],
       "commands": ["workbench.view.explorer"],
     },
+    {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.navigateBack"],
+    },
+    {
+      "before": ["<C-i>"],
+      "commands": ["workbench.action.navigateForward"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -94,9 +102,19 @@
     },
   ],
   "vim.showMarksInGutter": true,
-  // Prettier
-  "[json][jsonc][typescript][typescriptreact][html][css][javascript]": {
-    "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 }
