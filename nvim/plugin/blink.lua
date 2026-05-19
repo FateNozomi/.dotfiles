@@ -1,7 +1,7 @@
 Config.later(function()
   vim.pack.add({
     "https://github.com/rafamadriz/friendly-snippets",
-    { src = "https://github.com/saghen/blink.cmp", version = "v1.10.1" },
+    { src = "https://github.com/saghen/blink.cmp", version = "v1.10.2" },
   })
   require("blink.cmp").setup({
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
