@@ -349,6 +349,11 @@ later(function()
   nmap_leader("fd", '<Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace")
   nmap_leader("fD", '<Cmd>Pick diagnostic scope="current"<CR>', "Diagnostic buffer")
   nmap_leader("ff", "<Cmd>Pick files<CR>", "Files")
+  nmap_leader(
+    "fF",
+    "<Cmd>lua MiniPick.builtin.cli({ command = { 'rg', '--files', '--no-ignore', '--hidden' } })<CR>",
+    "Files (no-ignore)"
+  )
   nmap_leader("fg", "<Cmd>Pick grep_live<CR>", "Grep live")
   nmap_leader("fG", '<Cmd>Pick grep pattern="<cword>"<CR>', "Grep current word")
   nmap_leader("fh", "<Cmd>Pick help<CR>", "Help tags")
