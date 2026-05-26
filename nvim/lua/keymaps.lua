@@ -57,6 +57,7 @@ xmap_leader("lf", formatting_cmd, "Format selection")
 
 -- o is for 'other'
 nmap_leader("oT", "<Cmd>horizontal term<CR>", "Terminal (horizontal)")
+nmap_leader("ou", '<Cmd>lua vim.pack.update(nil, { target = "lockfile" })<CR>', "Sync Vim package")
 
 -- e is for 'Explore' and 'Edit'
 local edit_lua_file = function(filename)
