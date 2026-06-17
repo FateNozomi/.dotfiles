@@ -1,4 +1,6 @@
-Invoke-Expression (&starship init powershell)
+if ($env:TERM -ne 'dumb') {
+    Invoke-Expression (&starship init powershell)
+}
 
 Set-Alias -Name lg -Value lazygit.exe
 Set-Alias -Name nvd -Value neovide
