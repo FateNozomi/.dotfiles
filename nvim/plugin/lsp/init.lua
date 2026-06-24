@@ -7,6 +7,7 @@ Config.now_if_args(function()
   -- Uncomment and tweak the following `vim.lsp.enable()` call to enable servers.
   vim.lsp.enable({
     "lua_ls",
+    "basedpyright",
     "jsonls",
     "vtsls",
   })
