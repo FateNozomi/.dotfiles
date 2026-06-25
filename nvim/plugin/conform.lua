@@ -6,6 +6,7 @@ Config.later(function()
       javascript = { "prettierd", "prettier", stop_after_first = true },
       json = { "jq" },
       lua = { "stylua" },
+      python = { "ruff_format" },
       typescript = { "prettierd", "prettier", stop_after_first = true },
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
       yaml = { "prettierd", "prettier", stop_after_first = true },
