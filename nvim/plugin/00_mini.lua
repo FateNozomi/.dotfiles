@@ -348,6 +348,7 @@ later(function()
   nmap_leader("fC", '<Cmd>Pick git_commits path="%"<CR>', "Commits (buf)")
   nmap_leader("fd", '<Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace")
   nmap_leader("fD", '<Cmd>Pick diagnostic scope="current"<CR>', "Diagnostic buffer")
+  map({ "n", "i" }, "<c-p>", "<Cmd>Pick files<CR>", { desc = "Files" })
   nmap_leader("ff", "<Cmd>Pick files<CR>", "Files")
   nmap_leader(
     "fF",
