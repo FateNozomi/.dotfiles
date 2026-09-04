@@ -6,7 +6,7 @@
       "version": "'v1.10.2'"
     },
     "conform.nvim": {
-      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+      "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "friendly-snippets": {
@@ -22,11 +22,11 @@
       "src": "https://github.com/folke/lazydev.nvim"
     },
     "mini.nvim": {
-      "rev": "946ae64e0ee807ae3c41f382f0114b4ed4915b2c",
+      "rev": "9d01f392b33fb2ba36fbc87fc0bf4453e63ffb0a",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "d592c1e6ad9a0a01b3d5ed3f0345d68407167181",
+      "rev": "85e732c62ac59ab7c12df71ddd020baa87948390",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "oil.nvim": {
@@ -38,7 +38,7 @@
       "src": "https://github.com/stevearc/quicker.nvim"
     },
     "roslyn.nvim": {
-      "rev": "2dcbbe81b48f8377df2281d9be4f2c84ccfff520",
+      "rev": "de9a98d61ed3fd01b5016eea5fe9e32f1a4c7cfb",
       "src": "https://github.com/seblyng/roslyn.nvim"
     },
     "vim-fugitive": {
