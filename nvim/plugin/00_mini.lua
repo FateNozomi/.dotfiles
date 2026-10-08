@@ -48,7 +48,7 @@ now(function()
   nmap_leader("sw", "<Cmd>lua MiniSessions.write()<CR>", "Write current")
 end)
 
-now(function() require("mini.statuscolumn").setup() end)
+now(function() require("mini.statuscolumn").setup({ dim_inactive = false }) end)
 
 now(function() require("mini.statusline").setup() end)
 
