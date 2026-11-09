@@ -1,12 +1,12 @@
 Config.now_if_args(function()
   -- Define hook to update tree-sitter parsers after plugin is updated
-  local ts_update = function() vim.cmd('TSUpdate') end
-  Config.on_packchanged('nvim-treesitter', { 'update' }, ts_update, ':TSUpdate')
+  local ts_update = function() vim.cmd("TSUpdate") end
+  Config.on_packchanged("nvim-treesitter", { "update" }, ts_update, ":TSUpdate")
 
   vim.pack.add({
-    'https://github.com/nvim-treesitter/nvim-treesitter',
-    'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
-    'https://github.com/nvim-treesitter/nvim-treesitter-context',
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+    "https://github.com/nvim-treesitter/nvim-treesitter-context",
   })
 
   -- Define languages which will have parsers installed and auto enabled
@@ -14,9 +14,9 @@ Config.now_if_args(function()
   -- for the installation to finish before opening a file for added language(s).
   local languages = {
     -- These are already pre-installed with Neovim. Used as an example.
-    'lua',
-    'vimdoc',
-    'markdown',
+    "lua",
+    "vimdoc",
+    "markdown",
     -- Add here more languages with which you want to use tree-sitter
     -- To see available languages:
     -- - Execute `:=require('nvim-treesitter').get_available()`
@@ -25,11 +25,11 @@ Config.now_if_args(function()
     "c_sharp",
     "typescript",
   }
-  local isnt_installed = function(lang)
-    return #vim.api.nvim_get_runtime_file('parser/' .. lang .. '.*', false) == 0
-  end
+  local isnt_installed = function(lang) return #vim.api.nvim_get_runtime_file("parser/" .. lang .. ".*", false) == 0 end
   local to_install = vim.tbl_filter(isnt_installed, languages)
-  if #to_install > 0 then require('nvim-treesitter').install(to_install) end
+  if #to_install > 0 then
+    require("nvim-treesitter").install(to_install)
+  end
 
   -- Enable tree-sitter after opening a file for a target language
   local filetypes = {}
@@ -39,7 +39,10 @@ Config.now_if_args(function()
     end
   end
   local ts_start = function(ev) vim.treesitter.start(ev.buf) end
-  Config.new_autocmd('FileType', filetypes, ts_start, 'Start tree-sitter')
+  Config.new_autocmd("FileType", filetypes, ts_start, "Start tree-sitter")
+
+  vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true, sp = "Grey" })
+  vim.api.nvim_set_hl(0, "TreesitterContextLineNumberBottom", { underline = true, sp = "Grey" })
 end)
 
 -- C Compiler for Windows
