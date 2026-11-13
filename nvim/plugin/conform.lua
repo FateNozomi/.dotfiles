@@ -7,6 +7,7 @@ Config.later(function()
       json = { "jq" },
       lua = { "stylua" },
       python = { "ruff_format" },
+      sql = { "sql_formatter" },
       typescript = { "prettierd", "prettier", stop_after_first = true },
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
       yaml = { "prettierd", "prettier", stop_after_first = true },
@@ -29,6 +30,12 @@ Config.later(function()
           "2",
           "--collapse-simple-statement",
           "FunctionOnly",
+        },
+      },
+      sql_formatter = {
+        prepend_args = {
+          "--config",
+          '{"language": "tsql"}',
         },
       },
     },
